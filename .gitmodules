@@ -55,3 +55,6 @@
 [submodule "vim/plugged/unite.vim"]
 	path = vim/plugged/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
+[submodule "vim/plugged/ale"]
+	path = vim/plugged/ale
+	url = https://github.com/w0rp/ale.git

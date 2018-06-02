@@ -27,6 +27,7 @@ function! UserInit()
   " Add plugin via Plug command.
   Plug 'junegunn/seoul256.vim'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'w0rp/ale'
 
   map <C-n> :NERDTreeToggle<CR>
   " Close vim if NERDTree is the only thing open
