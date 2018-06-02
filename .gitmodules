@@ -4,3 +4,15 @@
 [submodule "vim/plugged/nerdtree"]
 	path = vim/plugged/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "space-vim"]
+	path = space-vim
+	url = https://github.com/liuchengxu/space-vim
+[submodule "vim/plugged/eleline.vim"]
+	path = vim/plugged/eleline.vim
+	url = https://github.com/liuchengxu/eleline.vim
+[submodule "vim/plugged/space-vim-dark"]
+	path = vim/plugged/space-vim-dark
+	url = https://github.com/liuchengxu/space-vim-dark
+[submodule "vim/plugged/vim-better-default"]
+	path = vim/plugged/vim-better-default
+	url = https://github.com/liuchengxu/vim-better-default

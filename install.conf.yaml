@@ -6,4 +6,7 @@
 
 - link:
     ~/.vim: vim
-    ~/.vimrc: vimrc
+    ~/.vimrc: space-vim/init.vim
+    ~/.space-vim: space-vim
+    ~/.spacevim: spacevim
+
