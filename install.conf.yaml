@@ -12,5 +12,5 @@
     ~/.vim: vim
     ~/.vimrc: space-vim/init.vim
     ~/.space-vim: space-vim
-    ~/.spacevim: spacevim
+    ~/.spacevim: spacevim.spacevim
 

@@ -26,6 +26,11 @@ function! UserInit()
 
   " Add plugin via Plug command.
   Plug 'junegunn/seoul256.vim'
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+  map <C-n> :NERDTreeToggle<CR>
+  " Close vim if NERDTree is the only thing open
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 endfunction
 
