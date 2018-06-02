@@ -50,8 +50,12 @@ for x in $(find . -type d) ; do
       echo Skipping main directory
       continue
     fi
-    if ask "Add this submodule?" Y ; then
-        git submodule add "${origin}" "${x}"
+    if [ "$1" == "--ask" ] ; then
+      if ask "Add this submodule?" Y ; then
+          git submodule add "${origin}" "${x}"
+      fi
+    else
+      git submodule add "${origin}" "${x}"
     fi
   fi
 done
