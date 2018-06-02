@@ -16,3 +16,42 @@
 [submodule "vim/plugged/vim-better-default"]
 	path = vim/plugged/vim-better-default
 	url = https://github.com/liuchengxu/vim-better-default
+[submodule "vim/plugged/seoul256.vim"]
+	path = vim/plugged/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "vim/plugged/is.vim"]
+	path = vim/plugged/is.vim
+	url = https://github.com/haya14busa/is.vim.git
+[submodule "vim/plugged/vim-signature"]
+	path = vim/plugged/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule "vim/plugged/vim-rsi"]
+	path = vim/plugged/vim-rsi
+	url = https://github.com/tpope/vim-rsi.git
+[submodule "vim/plugged/vim-anzu"]
+	path = vim/plugged/vim-anzu
+	url = https://github.com/osyo-manga/vim-anzu.git
+[submodule "vim/plugged/vim-better-whitespace"]
+	path = vim/plugged/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "vim/plugged/vim-choosewin"]
+	path = vim/plugged/vim-choosewin
+	url = https://github.com/t9md/vim-choosewin.git
+[submodule "vim/plugged/vim_current_word"]
+	path = vim/plugged/vim_current_word
+	url = https://github.com/dominikduda/vim_current_word.git
+[submodule "vim/plugged/vim-leader-guide"]
+	path = vim/plugged/vim-leader-guide
+	url = https://github.com/hecal3/vim-leader-guide.git
+[submodule "vim/plugged/vim-startify"]
+	path = vim/plugged/vim-startify
+	url = https://github.com/mhinz/vim-startify.git
+[submodule "vim/plugged/fzf.vim"]
+	path = vim/plugged/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vim/plugged/traces.vim"]
+	path = vim/plugged/traces.vim
+	url = https://github.com/xtal8/traces.vim.git
+[submodule "vim/plugged/unite.vim"]
+	path = vim/plugged/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
