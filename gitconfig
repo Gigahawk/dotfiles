@@ -1,0 +1,6 @@
+[user]
+	email = jasperchan515@gmail.com
+	name = Jasper Chan
+[core]
+	editor = vim
+	excludesfile = /home/jasper/.gitignore_global

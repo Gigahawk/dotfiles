@@ -26,3 +26,5 @@
       path: ranger/
     ~/.emacs.d: emacs.d
     ~/.spacemacs: spacemacs
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
