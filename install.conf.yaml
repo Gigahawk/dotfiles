@@ -18,4 +18,7 @@
     ~/.bash_profile: bash_profile
     ~/.xinitrc: xinitrc
     ~/.xprofile: xprofile
+    ~/.config/i3:
+        create: true
+        path: i3/
 
