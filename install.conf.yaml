@@ -24,6 +24,9 @@
     ~/.config/ranger:
       create: true
       path: ranger/
+    ~/.config/cura:
+      create: true
+      path: cura/
     ~/.emacs.d: emacs.d
     ~/.spacemacs: spacemacs
     ~/.gitconfig: gitconfig
