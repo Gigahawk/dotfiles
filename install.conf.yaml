@@ -13,4 +13,5 @@
     ~/.space-vim: space-vim
     ~/.spacevim: spacevim.spacevim
     ~/.Xdefaults: Xdefaults
+    ~/.anyconnect: anyconnect # Cisco Anyconnect (deprecated, use openconnect)
 
