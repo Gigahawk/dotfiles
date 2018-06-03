@@ -184,6 +184,9 @@ alias restart-dropdown="pkill -f 'urxvt -name dropdown -e tmux';urxvt -name drop
 # Add alias for ddlc
 alias ddlc="/opt/DDLC/DDLC.sh"
 
+# Add alias for tracker
+alias tracker="/opt/tracker/tracker.sh"
+
 # Add alias for music conversion
 alias flac2mp3all="find . -name \"*.flac\" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 {}.mp3 \\;"
 #flac2mp3(){
