@@ -27,6 +27,9 @@
     ~/.config/cura:
       create: true
       path: cura/
+    ~/.config/polybar:
+      create: true
+      path: polybar/
     ~/.emacs.d: emacs.d
     ~/.spacemacs: spacemacs
     ~/.gitconfig: gitconfig
