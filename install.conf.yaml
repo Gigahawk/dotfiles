@@ -21,4 +21,7 @@
     ~/.config/i3:
         create: true
         path: i3/
+    ~/.config/ranger:
+        create: true
+        path: ranger/
 
