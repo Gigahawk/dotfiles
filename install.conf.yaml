@@ -9,7 +9,6 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.vim: vim
     ~/.vimrc: space-vim/init.vim
     ~/.space-vim: space-vim
     ~/.spacevim: spacevim.spacevim
