@@ -4,3 +4,6 @@
 [submodule "space-vim"]
 	path = space-vim
 	url = https://github.com/liuchengxu/space-vim
+[submodule "emacs.d"]
+	path = emacs.d
+	url = https://github.com/syl20bnr/spacemacs
