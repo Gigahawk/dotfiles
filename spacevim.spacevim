@@ -37,6 +37,11 @@ function! UserInit()
   let g:ale_matlab_mlint_executable = '/usr/local/MATLAB/R2018a/bin/glnxa64/mlint'
   let g:ale_matlab_mlint_use_global = 1
 
+  " Navigate between windows
+  map <C-h> <C-w>h
+  map <C-j> <C-w>j
+  map <C-k> <C-w>k
+  map <C-l> <C-w>l
 endfunction
 
 " Override the default settings as well as adding extras
