@@ -1,0 +1,236 @@
+{
+   "packages":[
+      {
+         "name":"rambo",
+         "maintainer":"UltiMachine",
+         "websiteURL":"https://github.com/ultimachine/ArduinoAddons",
+         "email":"info@ultimachine.com",
+         "help":{
+            "online":"https://ultimachine.com"
+         },
+         "platforms":[
+            {
+               "name":"RepRap Arduino-compatible Mother Board (RAMBo)",
+               "architecture":"avr",
+               "version":"1.0.0",
+               "category":"Contributed",
+               "url":"https://raw.githubusercontent.com/ultimachine/ArduinoAddons/master/rambo-1.0.0.zip",
+               "archiveFileName":"rambo-1.0.0.zip",
+               "checksum":"SHA-256:bf6db5929e051ff61ede3066157ac4abc32db387dd4a694a37369835faea92c0",
+               "size":"944852",
+               "help":{
+                  "online":"http://reprap.org/wiki/Rambo"
+               },
+               "boards":[
+                  {
+                     "name":"Rambo"
+                  }
+               ],
+               "toolsDependencies":[
+                  {
+                     "packager":"arduino",
+                     "name":"avr-gcc",
+                     "version":"4.8.1-arduino5"
+                  },
+                  {
+                     "packager":"arduino",
+                     "name":"avrdude",
+                     "version":"6.0.1-arduino5"
+                  }
+               ]
+            }
+         ],
+         "tools":[]
+      },
+      {
+         "name":"rambo",
+         "maintainer":"UltiMachine",
+         "websiteURL":"https://github.com/ultimachine/ArduinoAddons",
+         "email":"info@ultimachine.com",
+         "help":{
+            "online":"https://ultimachine.com"
+         },
+         "platforms":[
+            {
+               "name":"RepRap Arduino-compatible Mother Board (RAMBo)",
+               "architecture":"avr",
+               "version":"1.0.1",
+               "category":"Contributed",
+               "url":"https://github.com/ultimachine/ArduinoAddons/raw/master/rambo-1.0.1.zip",
+               "archiveFileName":"rambo-1.0.1.zip",
+               "checksum":"SHA-256:a96124e15cbb1ff3fbafa2fc672e711090233dcab3c0a9a17b3759beb0249037",
+               "size":"945436",
+               "help":{
+                  "online":"http://reprap.org/wiki/Rambo"
+               },
+               "boards":[
+                  {
+                     "name":"Rambo"
+                  }
+               ],
+               "toolsDependencies":[]
+            }
+         ],
+         "tools":[]
+      },
+      {
+         "name":"ultimachine",
+         "maintainer":"UltiMachine",
+         "websiteURL":"https://github.com/ultimachine/ArduinoAddons",
+         "email":"info@ultimachine.com",
+         "help":{
+            "online":"https://ultimachine.com"
+         },
+         "platforms":[
+            {
+               "name":"Archim",
+               "architecture":"sam",
+               "version":"1.6.9-b",
+               "category":"Contributed",
+               "url":"https://github.com/ultimachine/ArchimAddons/files/628295/archim-1.6.9-b.zip",
+               "archiveFileName":"archim-1.6.9-b.zip",
+               "checksum":"SHA-256:ed9829ed3b9add2dba26a7808b135c5a650b7de6caf37c24c32e321322c49838",
+               "size":"18813072",
+               "help":{
+                  "online":"https://github.com/ultimachine/Archim/wiki"
+               },
+               "boards":[
+                  {
+                     "name":"Archim"
+                  }
+               ],
+			  "toolsDependencies": [
+				{
+				  "packager": "arduino",
+				  "name": "arm-none-eabi-gcc",
+				  "version": "4.8.3-2014q1"
+				},
+				{
+				  "packager": "arduino",
+				  "name": "bossac",
+				  "version": "1.7.0"
+				}
+               ]
+            },
+            {
+               "name":"Archim",
+               "architecture":"sam",
+               "version":"1.6.9-a",
+               "category":"Contributed",
+               "url":"https://github.com/ultimachine/ArchimAddons/files/530540/archim-1.6.9.zip",
+               "archiveFileName":"archim-1.6.9.zip",
+               "checksum":"SHA-256:46a1e42d7a76bb308aa1f32735c4149cf99fd0d81572a352bd28b9d74b51856b",
+               "size":"17505477",
+               "help":{
+                  "online":"https://github.com/ultimachine/Archim/wiki"
+               },
+               "boards":[
+                  {
+                     "name":"Archim"
+                  }
+               ],
+			  "toolsDependencies": [
+				{
+				  "packager": "arduino",
+				  "name": "arm-none-eabi-gcc",
+				  "version": "4.8.3-2014q1"
+				},
+				{
+				  "packager": "arduino",
+				  "name": "bossac",
+				  "version": "1.7.0"
+				}
+               ]
+            },
+            {
+               "name":"Feynman",
+               "architecture":"sam",
+               "version":"0.0.1",
+               "category":"Contributed",
+               "url":"https://github.com/ultimachine/FeynmanCore/releases/download/0.0.1/feynman-0.0.1.zip",
+               "archiveFileName":"feynman-0.0.1.zip",
+               "checksum":"SHA-256:5b83054b42fc8076ade457ac50701b5269959bb2422958021a233c04549b2668",
+               "size":"133312666",
+               "help":{
+                  "online":"https://github.com/ultimachine/FeynmanCore"
+               },
+               "boards":[
+                  {
+                     "name":"Feynman"
+                  }
+               ],
+			  "toolsDependencies": [
+				{
+				  "packager": "arduino",
+				  "name": "arm-none-eabi-gcc",
+				  "version": "4.8.3-2014q1"
+				},
+				{
+				  "packager": "ultimachine",
+				  "name": "bossac_samg55",
+				  "version": "1.8-samg55"
+				}
+               ]
+            },
+            {
+               "name":"Feynman",
+               "architecture":"sam",
+               "version":"0.0.2",
+               "category":"Contributed",
+               "url":"https://github.com/ultimachine/FeynmanCore/releases/download/0.0.2/feynman-0.0.2.zip",
+               "archiveFileName":"feynman-0.0.2.zip",
+               "checksum":"SHA-256:e133d953f45ea2806629d59ee2944b678c3550ecb4ff0c001e87645252c2ac0f",
+               "size":"133320098",
+               "help":{
+                  "online":"https://github.com/ultimachine/FeynmanCore"
+               },
+               "boards":[
+                  {
+                     "name":"Feynman"
+                  }
+               ],
+			  "toolsDependencies": [
+				{
+				  "packager": "arduino",
+				  "name": "arm-none-eabi-gcc",
+				  "version": "4.8.3-2014q1"
+				},
+				{
+				  "packager": "ultimachine",
+				  "name": "bossac_samg55",
+				  "version": "1.8.1-samg55"
+				}
+               ]
+            }
+         ],
+         "tools":[
+			{
+			  "name": "bossac_samg55",
+			  "version": "1.8-samg55",
+			  "systems": [
+					{
+					  "host": "i686-mingw32",
+					  "url": "https://github.com/ultimachine/bossac_samg55/releases/download/1.8-samg55/bossac_samg55-1.8-mingw32.zip",
+					  "archiveFileName": "bossac_samg55-1.8-mingw32.zip",
+					  "checksum": "SHA-256:f302b468ddcc7b4bd92f8296a18250ff9484c7d8ba4eca436765c77bb195316f",
+					  "size": "869192"
+					}
+				]
+			},
+			{
+			  "name": "bossac_samg55",
+			  "version": "1.8.1-samg55",
+			  "systems": [
+					{
+					  "host": "i686-mingw32",
+					  "url": "https://github.com/ultimachine/bossac_samg55/releases/download/1.8.1-samg55/bossac_samg55-1.8.1-mingw32.zip",
+					  "archiveFileName": "bossac_samg55-1.8.1-mingw32.zip",
+					  "checksum": "SHA-256:8550188dcc999904d31591353d4823783f2105f6116df301b7a6f50873da8387",
+					  "size": "869366"
+					}
+				]
+			}
+		 ]
+      }
+   ]
+}

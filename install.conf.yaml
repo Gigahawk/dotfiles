@@ -28,3 +28,4 @@
     ~/.spacemacs: spacemacs
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.arduino15: arduino15
