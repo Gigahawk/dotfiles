@@ -30,6 +30,9 @@
     ~/.config/polybar:
       create: true
       path: polybar/
+    ~/.config/neofetch:
+      create: true
+      path: neofetch/
     ~/.emacs.d: emacs.d
     ~/.spacemacs: spacemacs
     ~/.gitconfig: gitconfig
