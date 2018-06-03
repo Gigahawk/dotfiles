@@ -16,4 +16,6 @@
     ~/.anyconnect: anyconnect # Cisco Anyconnect (deprecated, use openconnect)
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
+    ~/.xinitrc: xinitrc
+    ~/.xprofile: xprofile
 
