@@ -13,7 +13,11 @@ export PATH=~/.bin:$PATH
 # Add pebble sdk to path
 export PATH=~/pebble-dev/pebble-sdk-4.5-linux64/bin:$PATH
 
-shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
+# Allows you to cd into directory merely by typing the directory name.
+shopt -s autocd
+
+# Always expand aliases (enables alias use in scripts)
+shopt -s expand_aliases
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
