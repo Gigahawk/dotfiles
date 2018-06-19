@@ -16,7 +16,7 @@ cmd=$(
       -e 's/\=.*$//' `# Remove everything including and after '='`\
       >> "$cache"
 	fi
-		dmenu_wrapper "$@" < "$cache"
+		dmenu_wrapper -fn "xft:monospace" "$@" < "$cache"
 )
 
 echo $cmd
