@@ -18,4 +18,4 @@ height=$(echo $screenres | jq '.height')
 xoffset=$(echo "($width-$dwidth)/2" | bc)
 yoffset=$(echo "($height-$dheight)/2" | bc)
 
-dmenu -l $lines -x $xoffset -y $yoffset -w $dwidth -h $lineheight
+dmenu -l $lines -x $xoffset -y $yoffset -w $dwidth -h $lineheight -i "$@"
