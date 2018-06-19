@@ -183,10 +183,8 @@ bindsym $mod+Shift+space 	floating toggle
 bindsym $mod+space		focus mode_toggle
 
 bindsym $mod+Escape		workspace prev
-bindsym $mod+Shift+Escape 	exec i3-msg exit
 
 bindsym $mod+BackSpace		exec $flash
-bindsym $mod+Shift+BackSpace	exec sudo reboot
 
 bindsym $mod+grave		exec $flash
 #bindsym $mod+asciitilde
@@ -210,7 +208,6 @@ bindsym $mod+e          exec dmenu_emoji_picker
 #bindsym $mod+Shift+e
 
 bindsym $mod+r 			exec $term -e ranger
-bindsym $mod+Shift+r		restart
 
 bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set 15; gaps outer current set 15
@@ -227,8 +224,8 @@ bindsym $mod+Shift+i		resize grow height 10 px or 10 ppt
 #bindsym $mod+o			exec --no-startup-id $beg
 bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 
-bindsym $mod+p			exec $pause
-bindsym $mod+Shift+p		exec mypaint
+bindsym $mod+p	exec dmenu_power
+bindsym $mod+Shift+p			exec $pause
 
 bindsym $mod+a			[instance="math"] scratchpad show; move position center
 bindsym $mod+Shift+a		exec pavucontrol

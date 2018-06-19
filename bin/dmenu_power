@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# Set options
+options=$(cat <<-END
+Shutdown
+Reboot
+Sleep
+Hibernate
+Restart i3
+Kill i3
+END
+)
+
+selection=$(echo "$options" | dmenu_wrapper -p "Power" -fn "xft:monospace" "$@")
+
+case $selection in
+  Shutdown)
+    dmenu_prompt "Shutdown?" "sudo shutdown -h now"
+    ;;
+  Reboot)
+    dmenu_prompt "Reboot?" "sudo shutdown -r now"
+    ;;
+  Sleep)
+    dmenu_prompt "Sleep?" "clean_sleep"
+    ;;
+  Hibernate)
+    dmenu_prompt "Hibernate?" "clean_hibernate"
+    ;;
+  "Restart i3")
+    i3-msg restart
+    ;;
+  "Kill i3")
+    i3-msg exit
+    ;;
+  *)
+    echo $selection
+    ;;
+esac

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+input_list=$(xinput list |\
+  sed '/Virtual/d' |\
+  sed -n 's/.*id=//p' |\
+  sed 's/\s.*$//')
+
+# Disable all inputs because that causes the screen to turn on
+while read -r num; do
+  xinput --disable $num
+done <<< "$input_list"
+
+# Turn screen off when writing to storage
+xset dpms force off
+
+sudo zzz
+
+xset dpms force on
+
+while read -r num; do
+  xinput --enable $num
+done <<< "$input_list"
