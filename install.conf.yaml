@@ -18,6 +18,7 @@
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.bash_profile: bash_profile
+    ~/.emoji: emoji
     ~/.xinitrc: xinitrc
     ~/.xprofile: xprofile
     ~/.config/i3:

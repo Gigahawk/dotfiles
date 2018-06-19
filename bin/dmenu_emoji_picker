@@ -1,0 +1,17 @@
+#!/bin/bash
+emoji_list=~/.emoji
+choice=$(dmenu_wrapper -p "Emoji" -fn "xft:monospace; Twitter Color Emoji" "$@" < "$emoji_list" )
+retcode=$?
+
+if [ $retcode -eq 0 ]; then
+  emoji=$(echo $choice | sed 's/\ .*$//')
+
+  copyq tab emoji add $emoji
+  copyq tab emoji select 0
+  copyq paste
+  sleep 1
+  copyq tab clipboard select 0
+fi
+
+
+

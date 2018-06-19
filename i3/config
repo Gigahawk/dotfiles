@@ -32,11 +32,6 @@ set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
 exec_always --no-startup-id xautolock -time 60 -locker "/home/jasper/.config/i3/lock.sh"
 #Start f.lux
 exec_always --no-startup-id xflux -l 49.179311327838334 -k 2400
-#Start deluge
-#exec_always --no-startup-id killall -q deluged
-#exec_always --no-startup-id killall -q deluge-web
-#exec_always --no-startup-id deluged
-#exec_always --no-startup-id deluge-web
 #Start Transmission
 exec --no-startup-id transmission-daemon
 #Start syncthing
@@ -44,6 +39,8 @@ exec_always --no-startup-id killall -q syncthing
 exec_always --no-startup-id syncthing -no-browser
 exec_always --no-startup-id killall -q syncthing-inotify
 exec_always --no-startup-id syncthing-inotify
+#Start CopyQ
+exec_always --no-startup-id copyq
 #Set wacom configuration things
 exec_always --no-startup-id ~/.config/Scripts/set-wacom.sh
 #Automount USB drives:
@@ -208,7 +205,8 @@ bindsym $mod+Shift+q		kill
 bindsym $mod+w			exec --no-startup-id $term -e w3m http://lukesmith.xyz
 bindsym $mod+Shift+w		exec --no-startup-id $BROWSER
 
-bindsym $mod+e			exec $term -e neomutt
+bindsym $mod+e          exec dmenu_emoji_picker
+#bindsym $mod+e			exec $term -e neomutt
 #bindsym $mod+Shift+e
 
 bindsym $mod+r 			exec $term -e ranger
