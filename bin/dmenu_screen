@@ -286,6 +286,9 @@ else
   echo "with display"
 fi
 
+# Relaunch polybar and reset wallpaper
+relaunch_polybar
+
 exit 0
 
 

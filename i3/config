@@ -399,9 +399,7 @@ bindsym $mod+F6		exec --no-startup-id urxvt -e transmission-remote-cli
 bindsym $mod+F7		exec transset -a --dec .15
 bindsym $mod+F8		exec transset -a --inc .15
 bindsym $mod+F9		exec --no-startup-id sudo mount -a
-bindsym $mod+F10	exec --no-startup-id ~/.config/Scripts/screen.sh l ;; exec --no-startup-id ~/.config/polybar/launch.sh
-bindsym $mod+F11	exec --no-startup-id ~/.config/Scripts/screen.sh v ;; exec --no-startup-id ~/.config/polybar/launch.sh
-bindsym $mod+F12	exec --no-startup-id ~/.config/Scripts/screen.sh d ;; exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym $mod+F10    exec --no-startup-id dmenu_screen
 
 
 ###---Arrow Keys---###
