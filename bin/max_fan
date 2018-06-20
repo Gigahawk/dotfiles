@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo su -c 'echo "level full-speed" > /proc/acpi/ibm/fan'
