@@ -1,0 +1,21 @@
+#!/bin/bash
+currdate=$(date +%b-%d-%Y_%T.%N)
+screencast_dir="/home/jasper/Videos/Screencasts"
+palette="/tmp/palette.png"
+filters="fps=24"
+slop=$(slop -f "%x %y %w %h %g %i") || exit 1
+
+read -r X Y W H G ID < <(echo $slop)
+notify-send "Screencast" "Recording"
+pkill compton
+ffmpeg -y -f x11grab -s "$W"x"$H" -i :0.0+$X,$Y -vcodec libx264 -crf 30 -preset ultrafast "$screencast_dir/$currdate.mp4"
+compton -b --xrender-sync-fence
+notify-send "Screencast" "Compressing"
+ffmpeg -y -i "$screencast_dir/$currdate.mp4" "$screencast_dir/$currdate-compressed.webm"
+#notify-send "Screencast" "Transcoding to gif"
+#ffmpeg -y -i "$screencast_dir/$currdate.webm" \
+#  -vf "$filters,palettegen" $palette
+#ffmpeg -y -i "$screencast_dir/$currdate.webm" -i $palette -lavfi \
+#  "$filters [x]; [x][1:v] paletteuse" "$screencast_dir/$currdate.gif"
+notify-send "Screencast" "Done"
+

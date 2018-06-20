@@ -1,0 +1,3 @@
+#!/bin/bash
+SCREENSHOTDATE=$(date +%b-%d-%Y_%T.%N)
+maim -s --format=png | tee ~/Pictures/Screenshots/$SCREENSHOTDATE.png | xclip -selection clipboard -t image/png
