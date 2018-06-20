@@ -24,6 +24,7 @@ function get_primary {
 function was_success {
   echo $1
   if [ $1 -ne 0 ]; then
+    relaunch_polybar
     exit $1
   fi
 }
@@ -180,6 +181,7 @@ function configure_primary {
       ;;
     Disable)
       xrandr --output $name --off
+      relaunch_polybar
       exit 0 # Exit because the menu might go away
       ;;
     *)
@@ -276,6 +278,7 @@ END
       ;;
     Disable)
       xrandr --output $name --off
+      relaunch_polybar
       exit 0 # Exit because the menu might go away
       ;;
     *)
