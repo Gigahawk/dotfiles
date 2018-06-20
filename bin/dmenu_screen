@@ -44,6 +44,18 @@ function is_disabled {
   fi
 }
 
+# Takes name of screen and checks if valid
+function is_valid {
+  local name=$(echo "$json" | jq -r ".[] | select(.key==\"$1\").key")
+  if [ -z "$name" ];then
+    #name is empty, not a valid name
+    echo 0
+  else
+    echo 1
+  fi
+}
+
+
 function init_display_info {
   # Using --current speeds things up, may cause bugs tho
   display_info=$(
@@ -120,7 +132,11 @@ function main_menu {
       arandr
       ;;
     *)
-      configure_external "$selection"
+      if [ $(is_valid "$selection") -eq 1 ]; then
+        configure_external "$selection"
+      else
+        main_menu
+      fi
       ;;
   esac
 }
