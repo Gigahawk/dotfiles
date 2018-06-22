@@ -9,7 +9,7 @@ json=""
 function laptop_only {
   while read -r output; do
     if [ "$output" = "LVDS1" ]; then
-      xrandr --output $output --auto
+      xrandr --output $output --auto --scale 1x1
     else
       xrandr --output $output --off
     fi
@@ -24,7 +24,7 @@ function get_primary {
 function was_success {
   echo $1
   if [ $1 -ne 0 ]; then
-    relaunch_polybar
+    feh --bg-scale ~/.config/wall.png
     exit $1
   fi
 }
@@ -181,7 +181,7 @@ function configure_primary {
       ;;
     Disable)
       xrandr --output $name --off
-      relaunch_polybar
+      feh --bg-scale ~/.config/wall.png
       exit 0 # Exit because the menu might go away
       ;;
     *)
@@ -270,15 +270,15 @@ END
       local resolution
       resolution=$(get_resolution "$name" "$resolutions")
       if [ "$?" -eq 0 ]; then
-        xrandr --output $name --mode $resolution
+        xrandr --output $name --mode $resolution --scale 1x1
       fi
       ;;
     Enable)
-      xrandr --output $name --auto
+      xrandr --output $name --auto --scale 1x1
       ;;
     Disable)
       xrandr --output $name --off
-      relaunch_polybar
+      feh --bg-scale ~/.config/wall.png
       exit 0 # Exit because the menu might go away
       ;;
     *)
@@ -306,7 +306,7 @@ else
 fi
 
 # Relaunch polybar and reset wallpaper
-relaunch_polybar
+feh --bg-scale ~/.config/wall.png
 
 exit 0
 
