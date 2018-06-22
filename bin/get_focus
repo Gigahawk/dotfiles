@@ -1,0 +1,3 @@
+#!/bin/bash
+# Echoes the currently active window
+echo $(i3-msg -t get_tree | jq -r '.. | objects | select(.focused==true).name')

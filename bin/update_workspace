@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -- "${1:-$(</dev/stdin)}" "${@:2}"
+focus="$1"
+if [ -z focus ]; then
+  focus=$(get_focus)
+fi
+
+num=$(get_workspace)
+icon=$(echo "$focus" | get_icon)
+
+if [ -z "$icon" ]; then
+  i3-msg "rename workspace to $num"
+else
+  i3-msg "rename workspace to \"$num $icon\""
+fi
+

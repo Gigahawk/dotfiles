@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Checks if argument provided, else uses stdin
+set -- "${1:-$(</dev/stdin)}" "${@:2}"
+
+
+case $1 in
+  *Firefox)
+    echo 
+    ;;
+  urxvt)
+    echo 
+    ;;
+  "Ultimaker Cura")
+    # Cubes
+    echo 
+    ;;
+  Telegram)
+    echo 
+    ;;
+  *'Arduino 1'*)
+    # microchip
+    echo 
+    ;;
+  *.pdf)
+    echo 
+    ;;
+  GParted)
+    # hdd
+    echo 
+    ;;
+  'emacs@'*)
+    # code
+    echo 
+    ;;
+  'GNU Image Manipulation Program')
+    # palette
+    echo 
+    ;;
+  *'– GIMP')
+    # palette
+    echo 
+    ;;
+  'Bluetooth Devices')
+    # bluetooth
+    echo 
+    ;;
+
+
+esac
