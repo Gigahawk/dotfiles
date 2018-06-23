@@ -413,7 +413,7 @@ bindsym $mod+F5		exec --no-startup-id sudo systemctl restart NetworkManager
 bindsym $mod+F6		exec --no-startup-id urxvt -e transmission-remote-cli
 bindsym $mod+F7		exec transset -a --dec .15
 bindsym $mod+F8		exec transset -a --inc .15
-bindsym $mod+F9		exec --no-startup-id sudo mount -a
+bindsym $mod+F9		exec --no-startup-id dmenu_mount
 bindsym $mod+F10    exec --no-startup-id dmenu_screen
 
 
