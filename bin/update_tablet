@@ -1,0 +1,11 @@
+#!/bin/sh
+
+position=$(
+xrandr --current | sed -r \
+  -e '/LVDS1/!d' \
+  -e 's/LVDS1[^0-9]*([0-9]{3,}x[0-9]{3,}\+[0-9]{1,}\+[0-9]{1,}).*/\1/'
+)
+
+xsetwacom set "Serial Wacom Tablet WACf00c stylus" maptooutput "$position"
+xsetwacom set "Serial Wacom Tablet WACf00c eraser" maptooutput "$position"
+xsetwacom set "Serial Wacom Tablet WACf00c touch" maptooutput "$position"

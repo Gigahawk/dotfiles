@@ -21,6 +21,7 @@
     ~/.emoji: emoji
     ~/.xinitrc: xinitrc
     ~/.xprofile: xprofile
+    ~/.xbindkeysrc: xbindkeysrc
     ~/.config/i3:
       create: true
       path: i3/

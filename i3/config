@@ -40,6 +40,8 @@ set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
 ###---Starting External Scripts---###
 # Start script to update icons on workspaces
 exec_always --no-startup-id update_workspaces
+# Start xbindkeys for tablet buttons
+exec_always --no-startup-id xbindkeys
 
 #Start autolocker
 exec_always --no-startup-id xautolock -time 60 -locker "/home/jasper/.config/i3/lock.sh"

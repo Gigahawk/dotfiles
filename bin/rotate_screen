@@ -1,0 +1,43 @@
+#!/bin/sh
+
+tablet="Serial Wacom Tablet WACf00c stylus"
+eraser="Serial Wacom Tablet WACf00c eraser"
+touch="Serial Wacom Tablet WACf00c touch"
+
+rotation=$(
+xrandr --current | sed \
+  -e '/LVDS1/!d' \
+  -e 's/(.*)//' | awk '{for(i=1;i<=NF;i++) if ($i=="inverted" || $i=="left" || $i=="right") print $i}'
+)
+if [ -z "$rotation" ]; then
+  rotation='normal'
+fi
+
+case $rotation in
+  normal)
+    xrandr --output LVDS1 --rotate right
+    xsetwacom set "$tablet" Rotate cw
+    xsetwacom set "$eraser" Rotate cw
+    xsetwacom set "$touch" Rotate cw
+    ;;
+  right)
+    xrandr --output LVDS1 --rotate inverted
+    xsetwacom set "$tablet" Rotate half
+    xsetwacom set "$eraser" Rotate half
+    xsetwacom set "$touch" Rotate half
+    ;;
+  inverted)
+    xrandr --output LVDS1 --rotate left
+    xsetwacom set "$tablet" Rotate ccw
+    xsetwacom set "$eraser" Rotate ccw
+    xsetwacom set "$touch" Rotate ccw
+    ;;
+  left)
+    xrandr --output LVDS1 --rotate normal
+    xsetwacom set "$tablet" Rotate none
+    xsetwacom set "$eraser" Rotate none
+    xsetwacom set "$touch" Rotate none
+    ;;
+esac
+
+update_tablet
