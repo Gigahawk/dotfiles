@@ -25,6 +25,7 @@ function was_success {
   echo $1
   if [ $1 -ne 0 ]; then
     feh --bg-scale ~/.config/wall.png
+    update_tablet
     exit $1
   fi
 }
@@ -182,6 +183,7 @@ function configure_primary {
     Disable)
       xrandr --output $name --off
       feh --bg-scale ~/.config/wall.png
+      update_tablet
       exit 0 # Exit because the menu might go away
       ;;
     *)
@@ -279,6 +281,7 @@ END
     Disable)
       xrandr --output $name --off
       feh --bg-scale ~/.config/wall.png
+      update_tablet
       exit 0 # Exit because the menu might go away
       ;;
     *)
