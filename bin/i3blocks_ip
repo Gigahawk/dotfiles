@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ssid=$(iwgetid -r)
+public=$(curl -s ipinfo.io/ip)
+
+

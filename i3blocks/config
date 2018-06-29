@@ -1,1 +1,20 @@
+command=/usr/libexec/i3blocks/$BLOCK_NAME
+markup=pango
+
+
+[weather]
+command=i3blocks_weather
+interval=10
+
+[battery]
+command=i3blocks_battery
+interval=5
+
+[iface]
+interval=10
+
+[time]
+command=date '+%a %b %d %Y, %T'
+interval=1
+
 

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+raw=$(acpi)
+if [ -z "$raw" ]; then
+  # Exit if no battery connected
+  exit 0
+fi
+
+charging=$(echo "$raw" | sed -r 's/.*(Charging|Discharging|Unknown|Full).*/\1/')
+percent=$(echo "$raw" | sed -r 's/.* ([0-9]{1,})%.*/\1/')
+timetocharge="($(echo "$raw" | sed -r 's/.* ([0-9]{2}:[0-9]{2}|never).*/\1/'))"
+
+if [ "$charging" = "Charging" ]; then
+  symbol="" #bolt
+elif [ "$percent" -gt 90 ]; then
+  symbol="" #battery-full
+elif [ "$percent" -gt 75 ]; then
+  symbol="" #battery-three-quarters
+elif [ "$percent" -gt 50 ]; then
+  symbol="" #battery-half
+elif [ "$percent" -gt 25 ]; then
+  symbol="" #battery-quarter
+else
+  symbol="" #battery-empty
+fi
+
+if [ "$timetocharge" = "(never)" ] || [ "$charging" = "Full" ] || [ "$charging" = "Unknown" ]; then
+  timetocharge=""
+fi
+
+echo $symbol $percent% $timetocharge
+echo $raw
+
