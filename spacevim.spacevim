@@ -51,6 +51,9 @@ function! UserConfig()
   let g:ale_matlab_mlint_executable = '/usr/local/MATLAB/R2018a/bin/glnxa64/mlint'
   let g:ale_matlab_mlint_use_global = 1
 
+  " Show hidden files in NERDTree
+  let g:NERDTreeShowHidden = 1
+
 
   " Use gui colors in terminal if available
   function! s:enable_termgui()
