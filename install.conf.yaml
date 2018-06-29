@@ -18,6 +18,10 @@
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.bash_profile: bash_profile
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.zlogin: zlogin
+    ~/.zprofile: zprofile
     ~/.emoji: emoji
     ~/.xinitrc: xinitrc
     ~/.xprofile: xprofile
