@@ -80,9 +80,9 @@ exec --no-startup-id compton -b --xrender-sync-fence
 #Launch Polybar where appropriate:
 #exec_always --no-startup-id ~/.config/polybar/launch.sh
 #Start the offlineimap daemon;
-exec --no-startup-id killall python ~/.config/Scripts/offlineimap-daemon.py
+#exec --no-startup-id killall python ~/.config/Scripts/offlineimap-daemon.py
 #exec --no-startup-id python ~/.config/Scripts/offlineimap-daemon.py >/dev/null
-exec --no-startup-id python ~/.config/Scripts/offlineimap-daemon.py
+#exec --no-startup-id python ~/.config/Scripts/offlineimap-daemon.py
 #Add wallpaper:
 exec --no-startup-id feh --bg-scale ~/.config/wall.png
 #exec_always --no-startup-id wal -c -i ~/.config/wall.png
@@ -220,7 +220,6 @@ bindsym $mod+Shift+w		exec --no-startup-id $BROWSER
 
 bindsym $mod+e          exec dmenu_emoji_picker
 #bindsym $mod+e			exec $term -e neomutt
-#bindsym $mod+Shift+e
 
 bindsym $mod+r 			exec $term -e ranger
 
@@ -298,10 +297,10 @@ bindsym $mod+Shift+m		exec $mute
 
 
 ###---Workspace Bindings---###
-bindsym $mod+Home		workspace $ws1
-bindsym $mod+Shift+Home		move container to workspace $ws1
-bindsym $mod+End		workspace $ws10
-bindsym $mod+Shift+End		move container to workspace $ws10
+bindsym $mod+Home		workspace number $ws1
+bindsym $mod+Shift+Home		move container to workspace number $ws1
+bindsym $mod+End		workspace number $ws10
+bindsym $mod+Shift+End		move container to workspace number $ws10
 bindsym $mod+Prior		workspace prev
 bindsym $mod+Shift+Prior	move container to workspace prev
 bindsym $mod+Next		workspace next
@@ -316,17 +315,6 @@ bindsym $mod+apostrophe		split horizontal ;; exec $term
 bindsym $mod+slash		split vertical ;; exec $term
 bindsym $mod+Shift+slash	kill
 bindsym $mod+backslash		workspace back_and_forth
-
-#set $ws1 "1: "
-#set $ws2 "2: "
-#set $ws3 "3: "
-#set $ws4 "4: "
-#set $ws5 "5: "
-#set $ws6 "6: "
-#set $ws7 "7: "
-#set $ws8 "8: "
-#set $ws9 "9: "
-#set $ws10 "10: "
 
 set $ws1 "1"
 set $ws2 "2"
