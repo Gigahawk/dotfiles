@@ -7,15 +7,15 @@
 # the display resolution, in pixels per inch
 display_dpi=96.00
 # the initial zoom level, in percent
-initial_zoom=147.43
+initial_zoom=100.00
 # maximize the window at startup (true/false)
 window_maximize=false
 # start in full screen mode (true/false)
 window_fullscreen=false
 # the window width in pixels (when not maximized)
-window_width=1222
+window_width=1218
 # the window height in pixels
-window_height=720
+window_height=718
 # scrollbar step increment (in pixels)
 scrollbar_speed=30
 # the step increment in the zoom dialog box
@@ -37,7 +37,7 @@ use_erasertip=true
 # always map touchscreen device to hand tool (true/false) (requires separate pen and touch devices)
 touchscreen_as_hand_tool=true
 # disable touchscreen device when pen is in proximity (true/false) (requires separate pen and touch devices)
-pen_disables_touch=false
+pen_disables_touch=true
 # name of touchscreen device for touchscreen_as_hand_tool
 touchscreen_device_name=Serial Wacom Tablet WACf00c touch
 # buttons 2 and 3 switch mappings instead of drawing (useful for some tablets) (true/false)
@@ -51,7 +51,7 @@ autosave_enabled=false
 # delay for periodic autosaves (in seconds)
 autosave_delay=5
 # default path for open/save (leave blank for current directory)
-default_path=
+default_path=/home/jasper
 # use pressure sensitivity to control pen stroke width (true/false)
 pressure_sensitivity=false
 # minimum width multiplier
