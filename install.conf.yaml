@@ -45,6 +45,9 @@
     ~/.config/neofetch:
       create: true
       path: neofetch/
+    ~/.xournal/config:
+      create: true
+      path: xournalconfig
     ~/.emacs.d: emacs.d
     ~/.spacemacs: spacemacs
     ~/.gitconfig: gitconfig
