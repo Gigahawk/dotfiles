@@ -22,6 +22,7 @@
     ~/.zshenv: zshenv
     ~/.zlogin: zlogin
     ~/.zprofile: zprofile
+    ~/.zaliases: zaliases
     ~/.emoji: emoji
     ~/.xinitrc: xinitrc
     ~/.xprofile: xprofile

@@ -1,0 +1,28 @@
+#Alias matlab to never run in desktop mode
+alias matlab="matlab -nodesktop"
+
+alias android-studio="studio.sh"
+
+# Add alias to restart floating window
+alias restart-dropdown="pkill -f 'urxvt -name dropdown -e tmux';urxvt -name dropdown -e tmux &"
+
+# Add alias for ddlc
+alias ddlc="/opt/DDLC/DDLC.sh"
+
+# Add alias for tracker
+alias tracker="/opt/tracker/tracker.sh"
+
+# Add alias for music conversion
+alias flac2mp3all="find . -name \"*.flac\" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 {}.mp3 \\;"
+
+#Clipboard management
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+alias pbselect="xclip -selection primary -o"
+alias pbselectin="xclip -selection primary"
+
+#Some aliases
+alias yt="youtube-dl -ic"
+alias yta="youtube-dl -xic"
+alias ytd="youtube-dl -x --audio-quality 0 --audio-format mp3"
+alias v="vim"
