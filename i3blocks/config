@@ -4,7 +4,7 @@ markup=pango
 
 [weather]
 command=i3blocks_weather
-interval=10
+interval=1800
 
 [battery]
 command=i3blocks_battery
