@@ -50,6 +50,9 @@ function! UserConfig()
   " Use correct syntax for spacevim config
   au BufRead,BufNewFile spacevim setfiletype vim
 
+  " Use correct syntax for xbps-src templates
+  au BufRead,BufNewFile srcpkgs/*/template setfiletype sh
+
   " Set path for MATLAB linting using ale
   let g:ale_matlab_mlint_executable = '/usr/local/MATLAB/R2018a/bin/glnxa64/mlint'
   let g:ale_matlab_mlint_use_global = 1
