@@ -1,6 +1,10 @@
 command=/usr/libexec/i3blocks/$BLOCK_NAME
 markup=pango
 
+[xbps]
+label=
+command=i3blocks_xbps
+interval=28800
 
 [weather]
 command=i3blocks_weather

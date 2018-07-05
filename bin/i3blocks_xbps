@@ -1,0 +1,7 @@
+#!/bin/bash
+
+count=$(xbps-install -Sun | wc -l)
+
+if [ "$count" -ne 0 ]; then
+  echo $count
+fi
