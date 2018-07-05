@@ -52,6 +52,7 @@ function! UserConfig()
 
   " Use correct syntax for xbps-src templates
   au BufRead,BufNewFile srcpkgs/*/template setfiletype sh
+  au BufRead,BufNewFile srcpkgs/*/template setlocal ts=4 sts=4 sw=4 noexpandtab
 
   " Set path for MATLAB linting using ale
   let g:ale_matlab_mlint_executable = '/usr/local/MATLAB/R2018a/bin/glnxa64/mlint'
