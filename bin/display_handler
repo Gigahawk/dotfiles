@@ -1,0 +1,12 @@
+#!/bin/bash
+
+export DISPLAY=:0
+export XAUTHORITY=/home/jasper/.Xauthority
+
+disconnected=$(xrandr --current | sed -n '/disconnected/p' | awk '{print $1;}')
+
+while read -r output; do
+  xrandr --output "$output" --off
+done <<< "$disconnected"
+
+echo "$disconnected" > /home/jasper/disp_handle
