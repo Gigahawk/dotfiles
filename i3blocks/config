@@ -6,6 +6,10 @@ label=
 command=i3blocks_xbps
 interval=300
 
+[volume]
+command=i3blocks_volume -S -F 2
+interval=persist
+
 [weather]
 command=i3blocks_weather
 interval=1800

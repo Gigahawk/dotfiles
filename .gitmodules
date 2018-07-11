@@ -10,3 +10,6 @@
 [submodule "antigen"]
 	path = antigen
 	url = git@github.com:zsh-users/antigen.git
+[submodule "i3blocks-contrib"]
+	path = i3blocks-contrib
+	url = git@github.com:vivien/i3blocks-contrib.git
