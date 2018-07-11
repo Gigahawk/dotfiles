@@ -4,7 +4,7 @@ markup=pango
 [xbps]
 label=
 command=i3blocks_xbps
-interval=28800
+interval=300
 
 [weather]
 command=i3blocks_weather
