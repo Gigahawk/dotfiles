@@ -1,3 +1,4 @@
+# vim: filetype=dosini
 command=/usr/libexec/i3blocks/$BLOCK_NAME
 markup=pango
 
@@ -10,9 +11,9 @@ interval=300
 command=i3blocks_volume -S -F 2
 interval=persist
 
-[weather]
-command=i3blocks_weather
-interval=1800
+#[weather]
+#command=i3blocks_weather
+#interval=1800
 
 [battery]
 command=i3blocks_battery
@@ -24,5 +25,4 @@ interval=10
 [time]
 command=date '+%a %b %d %Y, %T'
 interval=1
-
 
