@@ -3,13 +3,25 @@
 # Checks if argument provided, else uses stdin
 set -- "${1:-$(</dev/stdin)}" "${@:2}"
 
+zsh_prompt="$(whoami)@$(hostname):"
+drop_prompt="$(hostname):0.0.0 zsh $(hostname)"
 
 case $1 in
   *Firefox)
+    #firefox
     echo 
     ;;
   urxvt)
+    #terminal
     echo 
+    ;;
+  "$zsh_prompt"*)
+    #terminal
+    echo 
+    ;;
+  "$drop_prompt")
+    #caret-square-down
+    echo 
     ;;
   "Ultimaker Cura")
     # Cubes
@@ -33,6 +45,10 @@ case $1 in
     # code
     echo 
     ;;
+  'vim '*)
+    # code
+    echo 
+    ;;
   'GNU Image Manipulation Program')
     # palette
     echo 
@@ -45,6 +61,8 @@ case $1 in
     # bluetooth
     echo 
     ;;
-
-
+  'ranger')
+    #folder
+    echo 
+    ;;
 esac
