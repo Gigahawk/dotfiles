@@ -65,4 +65,16 @@ case $1 in
     #folder
     echo 
     ;;
+  'tty-clock'*)
+    #clock
+    echo 
+    ;;
+  'cargo install'*)
+    #download solid
+    echo 
+    ;;
+  *'xbps-install'*)
+    #download solid
+    echo 
+    ;;
 esac
