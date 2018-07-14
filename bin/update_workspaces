@@ -3,6 +3,6 @@
 
 stdbuf -oL xtitle -s |
   while IFS= read -r line; do
-    echo $line | update_workspace
+    echo $line | update_workspace &
   done
 

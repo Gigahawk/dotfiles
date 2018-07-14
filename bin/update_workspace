@@ -6,12 +6,13 @@ if [ -z focus ]; then
   focus=$(get_focus)
 fi
 
-num=$(get_workspace)
+workspace=$(get_workspace name)
+num=${workspace/%\ */}
 icon=$(echo "$focus" | get_icon)
 
 if [ -z "$icon" ]; then
-  i3-msg "rename workspace to $num"
+  i3-msg "rename workspace \"$workspace\" to \"$num\""
 else
-  i3-msg "rename workspace to \"$num $icon\""
+  i3-msg "rename workspace \"$workspace\" to \"$num $icon\""
 fi
 
