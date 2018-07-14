@@ -33,3 +33,13 @@ export PATH=~/.pub-cache/bin:$PATH
 
 # Add Processing to path
 export PATH=/opt/processing-3.3.6:$PATH
+
+# Add rust binaries to path
+export PATH=~/.cargo/bin:$PATH
+
+# Add perl binaries to path
+PATH="/home/jasper/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/jasper/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/jasper/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/jasper/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jasper/perl5"; export PERL_MM_OPT;

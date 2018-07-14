@@ -22,3 +22,4 @@ antigen apply
 if [ -f ~/.zaliases ]; then
   source ~/.zaliases
 fi
+
