@@ -45,6 +45,9 @@
     ~/.config/neofetch:
       create: true
       path: neofetch/
+    ~/.config/luakit:
+      create: true
+      path: luakit/
     ~/.xournal/config:
       create: true
       path: xournalconfig
