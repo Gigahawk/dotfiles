@@ -48,6 +48,9 @@
     ~/.config/luakit:
       create: true
       path: luakit/
+    ~/.config/user-dirs.dirs:
+      create: true
+      path: user-dirs.dirs
     ~/.xournal/config:
       create: true
       path: xournalconfig
