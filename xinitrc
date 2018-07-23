@@ -9,3 +9,6 @@ xset -b
 
 #disable screen saver blanking
 xset s off
+
+#Disable screen turning off
+xset dpms 0 0 0
