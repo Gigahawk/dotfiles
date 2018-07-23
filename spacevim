@@ -55,6 +55,12 @@ function! UserConfig()
   au BufRead,BufNewFile srcpkgs/*/template setfiletype sh
   au BufRead,BufNewFile srcpkgs/*/template setlocal ts=4 sts=4 sw=4 noexpandtab
 
+  " Use correct syntax for yaml files
+  augroup filetype_yaml
+    au!
+    au FileType yaml setlocal ts=2 sw=2 expandtab
+  augroup END
+
   " Set path for MATLAB linting using ale
   let g:ale_matlab_mlint_executable = '/usr/local/MATLAB/R2018a/bin/glnxa64/mlint'
   let g:ale_matlab_mlint_use_global = 1
