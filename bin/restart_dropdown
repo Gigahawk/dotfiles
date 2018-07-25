@@ -1,0 +1,24 @@
+#!/bin/bash
+
+start_tmux() {
+  sessions=$(tmux ls | cut -d':' -f1)
+  if [[ ! $sessions = *"dropdown"* ]]; then
+    # Session has been killed, restart
+    tmux new-session -d -s dropdown
+  fi
+}
+
+user=$(whoami)
+pids=$(ps aux | grep "urxvt -name dropdown" | sed -e "/^$user/!d" -e "/grep/d" -r -e "s/$user[ \t]+([[:digit:]]{1,}).*/\1/g")
+
+while read -r pid; do
+  kill $pid
+done <<< "$pids"
+
+start_tmux
+
+nohup urxvt -name dropdown -e tmux attach -t dropdown &
+
+
+
+
