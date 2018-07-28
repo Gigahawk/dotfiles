@@ -438,7 +438,7 @@ you should place your code here."
     )
   ;; Setup languages and stuff here
   ;; Replace path below to be where your matlab.el file is.
-  (add-to-list 'load-path "~/matlab-emacs")
+  (add-to-list 'load-path "~/.dotfiles/emacs/matlab/")
   (load-library "matlab-load")
   ;; Enable CEDET feature support for MATLAB code. (Optional)
   ;; (matlab-cedet-setup)
