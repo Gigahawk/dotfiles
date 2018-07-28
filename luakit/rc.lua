@@ -70,6 +70,7 @@ local binds = require "binds"
 -- Optional user script loading --
 ----------------------------------
 
+
 -- Add adblock
 local adblock = require "adblock"
 local adblock_chrome = require "adblock_chrome"
@@ -177,6 +178,7 @@ local tab_favicons = require "tab_favicons"
 -- Add :view-source command
 local view_source = require "view_source"
 
+require "userconf"
 -----------------------------
 -- End user script loading --
 -----------------------------
@@ -210,6 +212,5 @@ if unique then
     end)
 end
 
-require "userconf"
 
 -- vim: et:sw=4:ts=8:sts=4:tw=80
