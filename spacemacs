@@ -305,6 +305,9 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
+  "Fix tab key in evil"
+  (setq evil-want-C-i-jump nil)
+
   "Disable warning about setting PATH variables in zshrc"
   (setq exec-path-from-shell-check-startup-files nil)
 
@@ -326,8 +329,17 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
 
-  ; Preview latex documents
+  ;; Preview latex documents
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+
+  ;; Enable proper indentation in org-mode
+  ;;(add-hook 'org-mode-hook 'org-indent-mode)
+
+  ;; Fix helm lag
+  (setq helm-exit-idle-delay 0)
+
+  ;; Fix weird tab behavior in evil
+  (define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
 
 
   (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
@@ -350,6 +362,10 @@ you should place your code here."
 
 
   (with-eval-after-load 'org
+    ;; Fix weird tab behavior in org src blocks
+    (setq org-src-fontify-natively t)
+    (setq org-src-tab-acts-natively t)
+
     (defvar kk/org-latex-fragment-last nil
       "Holds last fragment/environment you were on.")
 
@@ -456,10 +472,30 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (vmd-mode mmm-mode markdown-toc markdown-mode gh-md pdf-tools tablist helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-statistics company-auctex company-anaconda company auto-yasnippet yasnippet ac-ispell auto-complete auctex-latexmk auctex projectile avy smartparens evil helm helm-core async hydra bind-key yapfify web-mode tagedit slim-mode scss-mode sass-mode pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download live-py-mode less-css-mode hy-mode dash-functional htmlize helm-pydoc helm-css-scss haml-mode gnuplot emmet-mode cython-mode anaconda-mode pythonic ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (yasnippet-snippets vmd-mode mmm-mode markdown-toc markdown-mode gh-md pdf-tools tablist helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-statistics company-auctex company-anaconda company auto-yasnippet yasnippet ac-ispell auto-complete auctex-latexmk auctex projectile avy smartparens evil helm helm-core async hydra bind-key yapfify web-mode tagedit slim-mode scss-mode sass-mode pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download live-py-mode less-css-mode hy-mode dash-functional htmlize helm-pydoc helm-css-scss haml-mode gnuplot emmet-mode cython-mode anaconda-mode pythonic ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (symon string-inflection spaceline-all-the-icons all-the-icons memoize powerline pippel pipenv password-generator spinner overseer org-brain nameless importmagic epc ctable concurrent deferred impatient-mode simple-httpd parent-mode helm-xref helm-purpose window-purpose imenu-list flx evil-org evil-lion iedit evil-cleverparens paredit anzu highlight editorconfig counsel-projectile counsel swiper ivy pkg-info epl centered-cursor-mode packed f dash s popup font-lock+ goto-chg undo-tree bind-map yasnippet-snippets vmd-mode mmm-mode markdown-toc markdown-mode gh-md pdf-tools tablist helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-statistics company-auctex company-anaconda company auto-yasnippet yasnippet ac-ispell auto-complete auctex-latexmk auctex projectile avy smartparens evil helm helm-core async hydra bind-key yapfify web-mode tagedit slim-mode scss-mode sass-mode pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download live-py-mode less-css-mode hy-mode dash-functional htmlize helm-pydoc helm-css-scss haml-mode gnuplot emmet-mode cython-mode anaconda-mode pythonic ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
