@@ -4,8 +4,8 @@
 [submodule "space-vim"]
 	path = space-vim
 	url = https://github.com/liuchengxu/space-vim
-[submodule "emacs.d"]
-	path = emacs.d
+[submodule "spacemacs.d"]
+	path = spacemacs.d
 	url = https://github.com/syl20bnr/spacemacs
 [submodule "antigen"]
 	path = antigen
@@ -13,3 +13,6 @@
 [submodule "i3blocks-contrib"]
 	path = i3blocks-contrib
 	url = git@github.com:vivien/i3blocks-contrib.git
+[submodule "doom-emacs.d"]
+	path = doom-emacs.d
+	url = https://github.com/hlissner/doom-emacs
