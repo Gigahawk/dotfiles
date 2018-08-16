@@ -22,7 +22,7 @@ export PATH=~/.local/bin:$PATH
 export PATH=/opt/Telegram/:$PATH
 
 # Add Android Studio to path
-export PATH=/opt/android-studio/bin:$PATH
+#export PATH=/opt/android-studio/bin:$PATH
 
 # Add flutter to path
 export PATH=/opt/flutter/bin:$PATH
