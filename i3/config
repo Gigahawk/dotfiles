@@ -37,7 +37,7 @@ set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
 ###---Starting External Scripts---###
 # Start script to update icons on workspaces
 exec_always --no-startup-id killall update_workspaces
-exec_always --no-startup-id update_workspaces
+exec_always --no-startup-id update_workspaces > /dev/null
 # Start xbindkeys for tablet buttons
 exec_always --no-startup-id xbindkeys
 
@@ -49,7 +49,7 @@ exec_always --no-startup-id xflux -l 49.179311327838334 -k 2400
 exec --no-startup-id transmission-daemon
 #Start syncthing
 exec_always --no-startup-id killall -q syncthing
-exec_always --no-startup-id syncthing -no-browser
+exec_always --no-startup-id syncthing -no-browser > /dev/null
 exec_always --no-startup-id killall -q syncthing-inotify
 exec_always --no-startup-id syncthing-inotify
 #Start CopyQ
@@ -236,8 +236,8 @@ bindsym $mod+Shift+i		resize grow height 10 px or 10 ppt
 #bindsym $mod+o			exec --no-startup-id $beg
 bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 
-bindsym $mod+p	exec dmenu_power
-bindsym $mod+Shift+p			exec $pause
+bindsym $mod+p	        exec passmenu_wrapper
+bindsym $mod+Shift+p	exec dmenu_power
 
 bindsym $mod+a			[instance="math"] scratchpad show; move position center
 bindsym $mod+Shift+a		exec pavucontrol
