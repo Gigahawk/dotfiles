@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+lines=10
+lineheight=30
+
+dwidth=800
+dheight=$(echo "$lines*$lineheight" | bc)
+
+workspaces=$(i3-msg -t get_workspaces)
+screens=$(i3-msg -t get_outputs)
+
+active=$(echo "$workspaces" | jq '.[] | select(.focused==true).name')
+screenres=$(echo "$screens" | jq '.[] | select(.current_workspace=='"$active"').rect')
+width=$(echo "$screenres" | jq '.width')
+height=$(echo "$screenres" | jq '.height')
+
+xoffset=$(echo "($width-$dwidth)/2" | bc)
+yoffset=$(echo "($height-$dheight)/2" | bc)
+
+passmenu --type -p "pass" -fn "mono" -l $lines -x $xoffset -y $yoffset -w $dwidth -h $lineheight -i "$@"

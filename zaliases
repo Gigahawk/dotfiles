@@ -26,6 +26,7 @@ alias gogen="gopass generate -x -xs=\"-\""
 
 # Sensible defaults for dmenu
 alias dmenu="dmenu_wrapper"
+alias passmenu="passmenu_wrapper"
 
 #Some aliases
 alias yt="youtube-dl -ic"
