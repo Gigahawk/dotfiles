@@ -21,6 +21,9 @@ alias pbpaste="xclip -selection clipboard -o"
 alias pbselect="xclip -selection primary -o"
 alias pbselectin="xclip -selection primary"
 
+#Gopass aliases
+alias gogen="gopass generate -x -xs=\"-\""
+
 #Some aliases
 alias yt="youtube-dl -ic"
 alias yta="youtube-dl -xic"
