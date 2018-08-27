@@ -54,8 +54,10 @@
     ~/.xournal/config:
       create: true
       path: xournalconfig
-    ~/.emacs.d: emacs.d
-    ~/.spacemacs: spacemacs
+    ~/.emacs.d: doom-emacs.d
+    ~/.config/doom:
+      create: true
+      path: doom.d
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.arduino15: arduino15
