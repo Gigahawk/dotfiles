@@ -19,3 +19,6 @@
 [submodule "emacs/scimax"]
 	path = emacs/scimax
 	url = https://github.com/jkitchin/scimax
+[submodule "misc/artwiz-lemon-ttf"]
+	path = misc/artwiz-lemon-ttf
+	url = https://github.com/fennerm/artwiz-lemon-ttf
