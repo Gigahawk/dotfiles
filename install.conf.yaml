@@ -58,6 +58,9 @@
     ~/.config/doom:
       create: true
       path: doom.d
+    ~/.local/share/fonts:
+      create: true
+      path: fonts
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.arduino15: arduino15
