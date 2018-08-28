@@ -452,7 +452,7 @@ bindsym XF86Launch1		exec $stoprec
 bindsym XF86AudioMute		exec $mute
 bindsym XF86AudioLowerVolume	exec $dec
 bindsym XF86AudioRaiseVolume	exec $inc
-bindsym XF86PowerOff		exec sudo shutdown -h now
+bindsym XF86PowerOff		exec sudo zzz
 #bindsym XF86Copy		exec
 #bindsym XF86Open		exec
 #bindsym XF86Paste		exec
