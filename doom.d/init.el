@@ -33,20 +33,20 @@
       ;fci               ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-      ;neotree           ; a project drawer, like NERDTree for vim
+       neotree           ; a project drawer, like NERDTree for vim
        treemacs          ; a project drawer, like neotree but cooler
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-      ;pretty-code       ; replace bits of code with pretty symbols
+       pretty-code       ; replace bits of code with pretty symbols
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
-      ;unicode           ; extended unicode support for various languages
+       unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
 
        :editor
-      ;parinfer          ; turn lisp into python, sort of
+       parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
        :emacs
@@ -66,9 +66,9 @@
       ;make              ; run make tasks from Emacs
       ;magit             ;
       ;password-store    ; password manager for nerds
-      ;pdf               ; pdf enhancements
+       pdf               ; pdf enhancements
       ;prodigy           ; FIXME managing external services & code builders
-      ;rgb               ; creating color strings
+       rgb               ; creating color strings
       ;tmux              ; an API for interacting with tmux
       ;upload            ; map local to remote projects via ssh/ftp
       ;wakatime
@@ -91,8 +91,8 @@
       ;hy                ; readability of scheme w/ speed of python
       ;(java +meghanada) ; the poster child for carpal tunnel syndrome
       ;javascript        ; all(hope(abandon(ye(who(enter(here))))))
-      ;julia             ; a better, faster MATLAB
-      ;latex             ; writing papers in Emacs has never been so fun
+      julia             ; a better, faster MATLAB
+      latex             ; writing papers in Emacs has never been so fun
       ;ledger            ; an accounting system in Emacs
       ;lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
