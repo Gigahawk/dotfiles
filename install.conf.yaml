@@ -55,7 +55,8 @@
       create: true
       path: xournalconfig
     #~/.emacs.d: doom-emacs.d
-    ~/.emacs.d: prelude-emacs
+    #~/.emacs.d: prelude-emacs
+    ~/.emacs.d: giga-emacs
     ~/.config/doom:
       create: true
       path: doom.d
