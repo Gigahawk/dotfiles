@@ -150,22 +150,13 @@
 
 
 (with-eval-after-load 'org
-  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
-  )
-;; Setup languages and stuff here
-;; Replace path below to be where your matlab.el file is.
-(add-to-list 'load-path "~/.dotfiles/emacs/matlab/")
-(load-library "matlab-load")
-;; Enable CEDET feature support for MATLAB code. (Optional)
-;; (matlab-cedet-setup)
-;; setup matlab in babel
-(setq org-babel-default-header-args:matlab
-      '((:results . "value") (:session . "*MATLAB*")))
+  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5)))
+
 
 (org-babel-do-load-languages
-  'org-babel-load-languages
-  '((python . t)
-    (ipython .t)
-    (matlab . t)
-    (emacs-lisp .t)
-    ))
+ 'org-babel-load-languages
+ '((python . t)
+   (ipython .t)
+   (matlab . t)
+   (emacs-lisp .t)
+   ))
