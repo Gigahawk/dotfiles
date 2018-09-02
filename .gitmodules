@@ -22,3 +22,6 @@
 [submodule "misc/artwiz-lemon-ttf"]
 	path = misc/artwiz-lemon-ttf
 	url = https://github.com/fennerm/artwiz-lemon-ttf
+[submodule "prelude"]
+	path = prelude-emacs
+	url = https://github.com/bbatsov/prelude.git
