@@ -18,9 +18,6 @@ export NVM_DIR="$HOME/.nvm"
 # Add aws cli to path
 export PATH=~/.local/bin:$PATH
 
-# Add Telegram to path
-export PATH=/opt/Telegram/:$PATH
-
 # Add Android Studio to path
 #export PATH=/opt/android-studio/bin:$PATH
 

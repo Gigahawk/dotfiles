@@ -3,6 +3,8 @@ alias matlab="matlab -nodesktop"
 
 #alias android-studio="studio.sh"
 
+alias telegram="Telegram"
+
 # Add alias to restart floating window
 alias restart-dropdown="pkill -f 'urxvt -name dropdown -e tmux';urxvt -name dropdown -e tmux &"
 
