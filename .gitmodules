@@ -25,3 +25,6 @@
 [submodule "prelude"]
 	path = prelude-emacs
 	url = https://github.com/bbatsov/prelude.git
+[submodule "giga-emacs/includes/ob-julia"]
+	path = giga-emacs/includes/ob-julia
+	url = https://github.com/gjkerns/ob-julia

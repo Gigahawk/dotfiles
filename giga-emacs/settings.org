@@ -172,6 +172,13 @@
 
 #+END_SRC
 
+*** Emacs Speaks Statistics
+#+BEGIN_SRC emacs-lisp
+
+(use-package ess
+  :ensure t)
+
+#+END_SRC
 *** Languages
 **** Python
 #+BEGIN_SRC emacs-lisp
@@ -190,6 +197,19 @@
 #+BEGIN_SRC emacs-lisp
 
 (use-package matlab-mode
+  :ensure t)
+
+#+END_SRC
+**** Julia
+#+BEGIN_SRC emacs-lisp
+
+(use-package julia-mode
+  :ensure t)
+
+(use-package julia-repl
+  :ensure t)
+
+(use-package julia-shell
   :ensure t)
 
 #+END_SRC
@@ -224,7 +244,7 @@
 #+END_SRC
 ** Org babel settings
 *** Evaluate code without confirmation
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 
 (setq org-confirm-babel-evaluate nil)
 
@@ -232,11 +252,14 @@
 *** Enabled languages
 #+BEGIN_SRC emacs-lisp
 
+(add-to-list 'load-path (substitute-in-file-name "~/.emacs.d/includes/ob-julia/"))
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
    (python     . t)
    (ipython    . t)
+   (julia      . t)
    (matlab     . t)))
 
 #+END_SRC
