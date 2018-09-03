@@ -459,7 +459,7 @@ bindsym XF86PowerOff		exec sudo zzz
 #bindsym XF86Cut		exec
 #bindsym XF86MenuKB		exec
 bindsym XF86Calculator		exec $term -e R -q
-bindsym XF86Sleep		exec sudo zzz
+#bindsym XF86Sleep		exec sudo zzz
 #bindsym XF86WakeUp		exec
 bindsym XF86Explorer		exec $term -e ranger
 #bindsym XF86Send		exec
