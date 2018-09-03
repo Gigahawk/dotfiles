@@ -1,0 +1,215 @@
+* UI Settings
+** Disable unnecessary UI elements
+#+BEGIN_SRC emacs-lisp
+
+(scroll-bar-mode -1)
+(tool-bar-mode   -1)
+(tooltip-mode    -1)
+(menu-bar-mode   -1)
+
+#+END_SRC
+
+** Font settings
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'default-frame-alist '(font . "hack-12"))
+(add-to-list 'default-frame-alist '(height . 24))
+(add-to-list 'default-frame-alist '(width . 80))
+
+#+END_SRC
+** Show matching parens
+#+BEGIN_SRC emacs-lisp
+
+(setq show-paren-delay 0)
+(show-paren-mode 1)
+
+#+END_SRC
+* Package Settings
+** Setup extra repos
+#+BEGIN_SRC emacs-lisp
+
+(require 'package)
+(setq package-enable-at-startup nil)
+(setq package-archives '(("org"   . "http://orgmode.org/elpa/")
+			 ("gnu"   . "http://elpa.gnu.org/packages/")
+			 ("melpa" . "https://melpa.org/packages/")))
+(package-initialize)
+
+#+END_SRC
+
+** Bootstrap `use-package`
+#+BEGIN_SRC emacs-lisp
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
+
+#+END_SRC
+
+
+
+
+** Enabled Packages
+*** evil-mode
+#+BEGIN_SRC emacs-lisp
+
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1))
+
+#+END_SRC
+*** Theme
+#+BEGIN_SRC emacs-lisp
+
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-one t))
+
+#+END_SRC
+
+*** Helm
+#+BEGIN_SRC emacs-lisp
+
+(use-package helm
+  :ensure t
+  :init
+  ;; Enable fuzzy matching
+  (setq helm-M-x-fuzzy-match t
+	helm-mode-fuzzy-match t
+	helm-buffers-fuzzy-matching t
+	helm-recentf-fuzzy-match t
+	helm-locate-fuzzy-match t
+	helm-semantic-fuzzy-match t
+	helm-imenu-fuzzy-match t
+	helm-completion-in-region-fuzzy-match t)
+
+  ;; Other things from some tutorial
+  (setq helm-candidate-number-list 150
+	helm-split-window-in-side-p t
+	helm-move-to-line-cycle-in-source t
+	helm-echo-input-in-header-line t
+	helm-autoresize-max-height 0
+	helm-autoresize-min-height 20)
+
+  ;; Fix [Display not ready] error
+  (setq helm-exit-idle-delay 0)
+  :config
+  (helm-mode 1))
+
+#+END_SRC
+*** restart-emacs
+#+BEGIN_SRC emacs-lisp
+
+(use-package restart-emacs
+  :ensure t
+  :init
+  (setq restart-emacs-restore-frames t))
+
+#+END_SRC
+*** org-bullets
+    Disabled for now (no internet)
+#+BEGIN_SRC emacs-lisp :tangle no
+
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+#+END_SRC
+*** Custom keybindings
+#+BEGIN_SRC emacs-lisp
+
+(use-package general
+  :ensure t
+  :config (general-define-key
+	   :states '(normal visual insert emacs)
+	   :prefix "SPC"
+	   :non-normal-prefix "M-SPC"
+	   ;; "/"  '(counsel-rb :which-key "ripgrep") ; requires counsel package
+	   "TAB"   '(switch-to-prev-buffer :which-key "previous buffer")
+	   "SPC"   '(helm-M-x :which-key "M-x")
+	   ":"     '(helm-M-x :which-key "M-x")
+	   ;; File operations
+	   "f"     '(:prefix t :which-key "files")
+	   "ff"    '(helm-find-files :which-key "open files")
+	   "fr"    '(helm-recentf :which-key "recent files")
+	   ;; Buffer operations
+	   "b"     '(:prefix t :which-key "buffers")
+	   "b TAB" '(switch-to-prev-buffer :which-key "previous buffer")
+	   "bb"    '(helm-buffers-list :which-key "buffers list")
+	   "bq"    '(my-kill-this-buffer :which-key "close buffer")
+	   ;; Window operations
+	   "w"     '(:prefix t :which-key "windows")
+	   "wl"    '(windmove-right :which-key "focus right")
+	   "wh"    '(windmove-left :which-key "focus left")
+	   "wk"    '(windmove-up :which-key "focus up")
+	   "wj"    '(windmove-down :which-key "focus down")
+	   "wv"    '(split-window-right :which-key "vertical split")
+	   "w-"    '(split-window-below :which-key "horizontal split")
+	   "wq"    '(delete-window :which-key "close window")
+	   ;; Closing/Restarting
+	   "q"     '(:prefix t :which-key "Quit/Restart")
+	   "qq"    '(save-buffers-kill-terminal :which-key "quit")
+	   "qr"    '(restart-emacs :which-key "restart")
+	   ;; Misc
+	   "at"    '(ansi-term :which-key "open terminal")))
+
+#+END_SRC
+
+*** Projectile
+#+BEGIN_SRC emacs-lisp
+
+(use-package projectile
+  :ensure t
+  :init
+  (setq projectile-require-project-root nil)
+  :config
+  (projectile-mode 1))
+
+#+END_SRC
+
+*** All The Icons
+#+BEGIN_SRC emacs-lisp
+
+(use-package all-the-icons
+  :ensure t)
+
+#+END_SRC
+
+*** NeoTree
+#+BEGIN_SRC emacs-lisp
+
+(use-package neotree
+  :ensure t
+  :init
+  (setq neo-there (if (display-graphic-p) 'icons 'arrow)))
+
+#+END_SRC
+
+
+* Custom functions
+** Kill active buffer
+#+BEGIN_SRC emacs-lisp
+
+(defun my-kill-this-buffer ()
+  "Because kill-this-buffer doesn't seem to do anything"
+  (interactive)
+  (kill-buffer (current-buffer)))
+
+#+END_SRC
+* Misc
+** Ensure path is setup properly
+#+BEGIN_SRC emacs-lisp
+
+(let ((path (shell-command-to-string ".~/.zshrc; echo -n $PATH")))
+  (setenv "PATH" path)
+  (setq exec-path
+	(append
+	 (split-string-and-unquote path ":")
+	 exec-path)))
+
+#+END_SRC
+

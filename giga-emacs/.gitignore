@@ -25,3 +25,5 @@ network-security.data
 *.log
 .directory
 
+# Tangled settings file
+/settings.el
