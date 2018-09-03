@@ -1,7 +1,51 @@
-#+PROPERTY: header-args :results output silent
-* Package Settings
-** Setup extra repos
-#+BEGIN_SRC emacs-lisp
+(setq org-startup-indented t)
+
+;;(setq org-src-fontify-natively t
+;;    org-src-window-setup 'current-window
+;;    org-src-strip-leading-and-trailing-blank-lines t
+;;    org-src-preserve-indentation t
+;;    org-src-tab-acts-natively t
+;;    org-edit-src-content-indentation 0)
+;;(setq auto-indent-start-org-indent t
+;;    auto-indent-fix-org-return t
+;;    auto-indent-delete-backward-char t
+;;    auto-indent-fix-org-move-beginning-of-line t
+;;    auto-indent-fix-org-yank t
+;;    auto-indent-fix-org-auto-fill t)
+
+
+;(with-eval-after-load 'org
+;  (setq org-src-fontify-natively t
+;        org-src-window-setup 'current-window
+;        org-src-strip-leading-and-trailing-blank-lines t
+;        org-src-preserve-indentation t
+;        org-src-tab-acts-natively t
+;        org-edit-src-content-indentation 0)
+;  (setq auto-indent-start-org-indent t
+;	auto-indent-fix-org-return t
+;	auto-indent-delete-backward-char t
+;	auto-indent-fix-org-move-beginning-of-line t
+;	auto-indent-fix-org-yank t
+;	auto-indent-fix-org-auto-fill t))
+(with-eval-after-load 'org
+  (setq org-src-fontify-natively t
+	org-src-preserve-indentation t
+	org-src-tab-acts-natively t
+	org-src-window-setup 'current-window
+	org-confirm-babel-evaluate nil
+	auto-indent-fix-org-return t))
+
+(scroll-bar-mode -1)
+(tool-bar-mode   -1)
+(tooltip-mode    -1)
+(menu-bar-mode   -1)
+
+(add-to-list 'default-frame-alist '(font . "hack-12"))
+(add-to-list 'default-frame-alist '(height . 24))
+(add-to-list 'default-frame-alist '(width . 80))
+
+(setq show-paren-delay 0)
+(show-paren-mode 1)
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -10,52 +54,20 @@
 			 ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 
-
-
-
-#+END_SRC
-** Bootstrap `use-package`
-#+BEGIN_SRC emacs-lisp
-
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
 
-#+END_SRC
-
-
-
-
-** Enabled Packages
-*** evil-mode
-#+BEGIN_SRC emacs-lisp
-
-(use-package evil
-  :ensure t
-  :config
-  (evil-mode 1))
-
-#+END_SRC
-**** Sane tab behavior
-#+BEGIN_SRC elisp
-
-;(setq evil-want-C-i-jump nil)
-;(define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
-
-#+END_SRC
-*** Theme
-#+BEGIN_SRC emacs-lisp
+;(use-package evil
+;  :ensure t
+;  :config
+;  (evil-mode 1))
 
 (use-package doom-themes
   :ensure t
   :config
   (load-theme 'doom-one t))
-
-#+END_SRC
-
-*** Helm
-#+BEGIN_SRC emacs-lisp
 
 (use-package helm
   :ensure t
@@ -83,27 +95,15 @@
   :config
   (helm-mode 1))
 
-#+END_SRC
-*** restart-emacs
-#+BEGIN_SRC emacs-lisp
-
 (use-package restart-emacs
   :ensure t
   :init
   (setq restart-emacs-restore-frames t))
 
-#+END_SRC
-*** org-bullets
-#+BEGIN_SRC emacs-lisp
-
 (use-package org-bullets
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-
-#+END_SRC
-*** Custom keybindings
-#+BEGIN_SRC emacs-lisp
 
 (use-package general
   :ensure t
@@ -140,11 +140,6 @@
 	   ;; Misc
 	   "at"    '(ansi-term :which-key "open terminal")))
 
-#+END_SRC
-
-*** Projectile
-#+BEGIN_SRC emacs-lisp
-
 (use-package projectile
   :ensure t
   :init
@@ -152,139 +147,18 @@
   :config
   (projectile-mode 1))
 
-#+END_SRC
-
-*** All The Icons
-#+BEGIN_SRC emacs-lisp
-
 (use-package all-the-icons
   :ensure t)
-
-#+END_SRC
-
-*** NeoTree
-#+BEGIN_SRC emacs-lisp
 
 (use-package neotree
   :ensure t
   :init
   (setq neo-there (if (display-graphic-p) 'icons 'arrow)))
 
-#+END_SRC
-
-*** Languages
-**** Python
-#+BEGIN_SRC emacs-lisp
-
-(use-package python
-  :ensure t)
-
-(use-package python-mode
-  :ensure t)
-
-(use-package ob-ipython
-  :ensure t)
-
-#+END_SRC
-**** Matlab
-#+BEGIN_SRC emacs-lisp
-
-(use-package matlab-mode
-  :ensure t)
-
-#+END_SRC
-* Org Settings
-** Indent subheadlines
-#+BEGIN_SRC emacs-lisp
-
-(setq org-startup-indented t)
-
-#+END_SRC
-** Source block indentation
-#+BEGIN_SRC emacs-lisp
-(setq org-src-fontify-natively t
-      org-src-preserve-indentation t
-      org-src-tab-acts-natively t
-      org-src-window-setup 'current-window)
-
-(add-hook 'org-mode-hook
-	  '(lambda ()
-	     (define-key org-mode-map (kbd "RET") 'org-return-indent)))
-
-(defun org-fix-newline-and-indent-in-src-blocks ()
-  "How is this still broken in 2018"
-  (when (org-in-src-block-p t)
-    (org-babel-do-in-edit-buffer
-     (call-interactively #'indent-for-tab-command))))
-
-(advice-add #'org-return-indent :after #'org-fix-newline-and-indent-in-src-blocks)
-
-
-
-#+END_SRC
-** Org babel settings
-*** Evaluate code without confirmation
-#+BEGIN_SRC elisp
-
-(setq org-confirm-babel-evaluate nil)
-
-#+END_SRC
-*** Enabled languages
-#+BEGIN_SRC emacs-lisp
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((emacs-lisp . t)
-   (python     . t)
-   (ipython    . t)
-   (matlab     . t)))
-
-#+END_SRC
-* UI Settings
-** Disable unnecessary UI elements
-#+BEGIN_SRC emacs-lisp
-
-(scroll-bar-mode -1)
-(tool-bar-mode   -1)
-(tooltip-mode    -1)
-(menu-bar-mode   -1)
-
-#+END_SRC
-
-** Font settings
-#+BEGIN_SRC emacs-lisp
-
-(add-to-list 'default-frame-alist '(font . "hack-12"))
-(add-to-list 'default-frame-alist '(height . 24))
-(add-to-list 'default-frame-alist '(width . 80))
-
-#+END_SRC
-** Show matching parens
-#+BEGIN_SRC emacs-lisp
-
-(setq show-paren-delay 0)
-(show-paren-mode 1)
-
-#+END_SRC
-** Confirmations are y-or-n instead of yes-or-no
-#+BEGIN_SRC emacs-lisp
-
-(defalias 'yes-or-no-p 'y-or-n-p)
-
-#+END_SRC
-* Custom functions
-** Kill active buffer
-#+BEGIN_SRC emacs-lisp
-
 (defun my-kill-this-buffer ()
   "Because kill-this-buffer doesn't seem to do anything"
   (interactive)
   (kill-buffer (current-buffer)))
-
-#+END_SRC
-* Misc
-** Ensure path is setup properly
-#+BEGIN_SRC emacs-lisp
 
 (let ((path (shell-command-to-string ".~/.zshrc; echo -n $PATH")))
   (setenv "PATH" path)
@@ -292,6 +166,3 @@
 	(append
 	 (split-string-and-unquote path ":")
 	 exec-path)))
-
-#+END_SRC
-
