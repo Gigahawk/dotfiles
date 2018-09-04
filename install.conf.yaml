@@ -54,6 +54,7 @@
     ~/.xournal/config:
       create: true
       path: xournalconfig
+    # Pick your emacs distro
     #~/.emacs.d: doom-emacs.d
     #~/.emacs.d: prelude-emacs
     ~/.emacs.d: giga-emacs

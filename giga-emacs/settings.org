@@ -6,12 +6,9 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives '(("org"   . "http://orgmode.org/elpa/")
-			 ("gnu"   . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "https://melpa.org/packages/")))
+                         ("gnu"   . "http://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
-
-
-
 
 #+END_SRC
 ** Bootstrap `use-package`
@@ -179,6 +176,24 @@
   :ensure t)
 
 #+END_SRC
+*** Rainbow Delimiters
+#+BEGIN_SRC emacs-lisp
+
+(use-package rainbow-delimiters
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+
+#+END_SRC
+*** linum-relative
+#+BEGIN_SRC emacs-lisp
+
+(use-package linum-relative
+  :ensure t
+  :config
+  (linum-relative-mode 1))
+
+#+END_SRC
 *** Languages
 **** Python
 #+BEGIN_SRC emacs-lisp
@@ -293,6 +308,18 @@
 #+BEGIN_SRC emacs-lisp
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+#+END_SRC
+** Conceal
+#+BEGIN_SRC emacs-lisp
+
+(global-prettify-symbols-mode 1)
+
+#+END_SRC
+** No Tabs
+#+BEGIN_SRC emacs-lisp
+
+(setq-default indent-tabs-mode nil)
 
 #+END_SRC
 * Custom functions
