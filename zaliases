@@ -30,8 +30,10 @@ alias gogen="gopass generate -x -xs=\"-\""
 alias dmenu="dmenu_wrapper"
 alias passmenu="passmenu_wrapper"
 
-#Some aliases
+# youtube-dl
 alias yt="youtube-dl -ic"
 alias yta="youtube-dl -xic"
-alias ytd="youtube-dl -x --audio-quality 0 --audio-format mp3"
+alias ytm="youtube-dl -x --audio-quality 0 --audio-format mp3"
+
+#Some aliases
 alias v="vim"

@@ -21,6 +21,11 @@ alias pbpaste="xclip -selection clipboard -o"
 alias pbselect="xclip -selection primary -o"
 alias pbselectin="xclip -selection primary"
 
+# youtube-dl
+alias yt="youtube-dl -ic"
+alias yta="youtube-dl -xic"
+alias ytm="youtube-dl -x --audio-quality 0 --audio-format mp3"
+
 #Generic shortcuts:
 alias music="ncmpcpp"
 alias clock="ncmpcpp -s clock"
