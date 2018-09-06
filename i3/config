@@ -53,7 +53,7 @@ exec_always --no-startup-id syncthing -no-browser > /dev/null
 exec_always --no-startup-id killall -q syncthing-inotify
 exec_always --no-startup-id syncthing-inotify
 #Start CopyQ
-exec_always --no-startup-id copyq
+#exec_always --no-startup-id copyq
 #Set wacom configuration things
 exec_always --no-startup-id ~/.config/Scripts/set-wacom.sh
 #Automount USB drives:
