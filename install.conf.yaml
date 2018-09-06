@@ -51,6 +51,9 @@
     ~/.config/user-dirs.dirs:
       create: true
       path: user-dirs.dirs
+    ~/.config/qutebrowser:
+      create: true
+      path: qutebrowser
     ~/.xournal/config:
       create: true
       path: xournalconfig
