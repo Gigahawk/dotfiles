@@ -6,6 +6,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
+    - [ln -sfn /media ~/media]
 
 - link:
     ~/.dotfiles: ''
