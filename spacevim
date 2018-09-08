@@ -30,6 +30,7 @@ function! UserInit()
   Plug 'w0rp/ale'
   Plug 'lervag/vimtex'
   Plug 'PotatoesMaster/i3-vim-syntax'
+  Plug 'sirtaj/vim-openscad'
 
   map <C-n> :NERDTreeToggle<CR>
   " Close vim if NERDTree is the only thing open
