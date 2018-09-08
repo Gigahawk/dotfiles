@@ -54,6 +54,10 @@
     ~/.config/qutebrowser:
       create: true
       path: qutebrowser
+    ~/.config/OpenSCAD:
+      create: true
+      path: OpenSCAD
+    ~/.openscad: openscad-libs
     ~/.xournal/config:
       create: true
       path: xournalconfig
