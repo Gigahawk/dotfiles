@@ -34,6 +34,9 @@ export PATH=/opt/processing-3.3.6:$PATH
 # Add rust binaries to path
 export PATH=~/.cargo/bin:$PATH
 
+# Add openscad libraries
+export OPENSCADPATH=$HOME/.openscad
+
 # Add perl binaries to path
 PATH="/home/jasper/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/jasper/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
