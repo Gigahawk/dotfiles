@@ -13,7 +13,7 @@ bar {
     status_command i3blocks
     position top
     mode dock
-    font pango:mono 10
+    font pango:Hack Regular 10
 }
 
 ###---Basic Definitions---###
