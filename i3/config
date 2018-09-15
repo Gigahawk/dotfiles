@@ -205,8 +205,8 @@ bindsym $mod+grave		exec $flash
 bindsym $mod+Shift+Delete	exec $truemute ; exec $truepause ; workspace lmao ; exec $term -e htop ; exec $term -e ranger
 
 ###---Screenshot bindings---###
-bindsym $mod+Shift+F4		exec --no-startup-id ~/.config/Scripts/snipper.sh
-bindsym $mod+Shift+F5		exec --no-startup-id ~/.config/Scripts/windowsnipper.sh
+bindsym $mod+Shift+F4		exec --no-startup-id snipper
+bindsym $mod+Shift+F5		exec --no-startup-id windowsnipper
 
 
 ###---Letter Key Bindings---###
