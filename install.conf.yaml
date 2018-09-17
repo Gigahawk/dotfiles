@@ -42,6 +42,9 @@
     ~/.config/cura:
       create: true
       path: cura/
+    ~/.local/share/cura/3.4/plugins/CustomSupports:
+      create: true
+      path: misc/cura-custom-supports/files/plugins/CustomSupports/
     ~/.config/polybar:
       create: true
       path: polybar/

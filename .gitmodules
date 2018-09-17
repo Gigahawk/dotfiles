@@ -28,3 +28,6 @@
 [submodule "giga-emacs/includes/ob-julia"]
 	path = giga-emacs/includes/ob-julia
 	url = https://github.com/gjkerns/ob-julia
+[submodule "misc/cura-custom-supports"]
+	path = misc/cura-custom-supports
+	url = https://github.com/lokster/cura-custom-supports
