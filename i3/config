@@ -257,7 +257,7 @@ bindsym $mod+f			fullscreen toggle
 #bindsym $mod+Shift+f
 
 bindsym $mod+g			workspace prev
-bindsym $mod+Shift+g		exec --no-startup-id gimp; workspace $ws5
+bindsym $mod+Shift+g		exec --no-startup-id gimp
 
 bindsym $mod+h			focus left
 bindsym $mod+Shift+h		move left 30
@@ -359,11 +359,6 @@ bindsym $mod+Control+l move workspace to output right
 for_window [class="Blender"] move to workspace $ws6
 for_window [class="Thunderbird"] move to workspace $ws9
 for_window [class="marble"] move to workspace $ws7
-#for_window [class="Firefox"] move to workspace $ws2
-for_window [title="GIMP Startup"] move workspace $ws5
-for_window [class="Gimp"] move workspace $ws5
-for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
-for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 for_window [window_role="tr-main"] move to workspace $ws8
 #for_window [title="projectM"] exec --no-startup-id transset -a --dec .25
 #for_window [class="st"] exec --no-startup-id transset -a --dec .25
