@@ -31,7 +31,7 @@ set $mod Mod4
 set $term urxvt
 set $video --no-startup-id bash ~/.config/Scripts/video.sh
 set $stoprec --no-startup-id killall ffmpeg & killall screenkey
-set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
+set $flash --no-startup-id flash_win
 
 
 ###---Starting External Scripts---###
