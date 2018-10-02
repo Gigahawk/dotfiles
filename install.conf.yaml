@@ -63,6 +63,9 @@
     ~/.config/OpenSCAD:
       create: true
       path: OpenSCAD
+    ~/.config/dunst:
+      create: true
+      path: dunst
     ~/.openscad: openscad-libs
     ~/.xournal/config:
       create: true
