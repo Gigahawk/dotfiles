@@ -1,5 +1,6 @@
 #!/bin/bash
 
+undock
 input_list=$(xinput list |\
   sed '/Virtual/d' |\
   sed -n 's/.*id=//p' |\

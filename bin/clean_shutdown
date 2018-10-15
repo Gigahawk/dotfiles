@@ -1,0 +1,4 @@
+#!/bin/bash
+
+undock
+sudo shutdown -h now

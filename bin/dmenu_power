@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Set options
 options=$(cat <<-END
@@ -11,14 +11,23 @@ Kill i3
 END
 )
 
+docks="$(find /sys/devices/platform/ -name docked)"
+
+while read -r docked; do
+  if [[ $(cat "$docked") -eq "1" ]]; then
+    options+=$'\nUndock'
+    break;
+  fi
+done <<< "$docks"
+
 selection=$(echo "$options" | dmenu_wrapper -p "Power" -fn "xft:monospace" "$@")
 
 case $selection in
   Shutdown)
-    dmenu_prompt "Shutdown?" "sudo shutdown -h now"
+    dmenu_prompt "Shutdown?" "clean_shutdown"
     ;;
   Reboot)
-    dmenu_prompt "Reboot?" "sudo shutdown -r now"
+    dmenu_prompt "Reboot?" "clean_reboot"
     ;;
   Sleep)
     dmenu_prompt "Sleep?" "clean_sleep"
@@ -31,6 +40,9 @@ case $selection in
     ;;
   "Kill i3")
     i3-msg exit
+    ;;
+  Undock)
+    undock
     ;;
   *)
     echo $selection

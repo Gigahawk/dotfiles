@@ -1,0 +1,7 @@
+#!/bin/bash
+
+undocks=$(find /sys/devices/platform/ -name undock)
+
+while read -r undock; do
+  echo 1 > "$undock"
+done <<< "$undocks"
