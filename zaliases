@@ -39,3 +39,8 @@ alias ytm="youtube-dl -x --audio-quality 0 --audio-format mp3"
 
 #Some aliases
 alias v="vim"
+
+# Enable local aliases
+if [ -f "$HOME/.zaliases_local" ]; then
+    . "$HOME/.zaliases_local"
+fi
