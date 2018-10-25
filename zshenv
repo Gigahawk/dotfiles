@@ -34,6 +34,10 @@ export PATH=/opt/processing-3.3.6:$PATH
 # Add rust binaries to path
 export PATH=~/.cargo/bin:$PATH
 
+# Add miniconda to path
+#export PATH=~/miniconda3/bin:$PATH
+. ~/miniconda3/etc/profile.d/conda.sh
+
 # Add openscad libraries
 export OPENSCADPATH=$HOME/.openscad
 
