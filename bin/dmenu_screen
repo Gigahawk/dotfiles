@@ -14,6 +14,7 @@ function laptop_only {
       xrandr --output $output --off
     fi
   done <<< "$1"
+  update_tablet
 }
 
 # Takes json of displays and echoes the primary one
