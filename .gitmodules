@@ -31,3 +31,6 @@
 [submodule "misc/cura-custom-supports"]
 	path = misc/cura-custom-supports
 	url = https://github.com/lokster/cura-custom-supports
+[submodule "giga-emacs/includes/ox-latex-subfigure"]
+	path = giga-emacs/includes/ox-latex-subfigure
+	url = https://github.com/linktohack/ox-latex-subfigure

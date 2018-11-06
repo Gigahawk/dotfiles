@@ -25,6 +25,84 @@
 
 
 ** Enabled Packages
+*** org packages
+**** COMMENT org-autolist
+#+BEGIN_SRC emacs-lisp
+
+(use-package org-autolist
+  :after org
+  :config
+  (org-autolist-mode +1))
+
+#+END_SRC
+**** org
+#+BEGIN_SRC emacs-lisp
+
+(use-package org
+  :ensure org-plus-contrib)
+
+#+END_SRC
+**** org-bullets
+#+BEGIN_SRC emacs-lisp
+
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+#+END_SRC
+**** org-ref
+#+BEGIN_SRC emacs-lisp
+
+(use-package org-ref
+  :after org
+  :init
+  (setq helm-bibtex-pdf-open-function
+        (lambda (fpath)
+          (start-process "open" "*open*" "open" fpath)))
+  :config
+  (setq bibtex-autokey-year-length 4
+        bibtex-autokey-name-year-separator "-"
+        bibtex-autokey-year-title-separator "-"
+        bibtex-autokey-titleword-separator "-"
+        bibtex-autokey-titlewords 2
+        bibtex-autokey-titlewords-stretch 1
+        bibtex-autokey-titleword-length 5))
+
+#+END_SRC
+**** doi-utils
+#+BEGIN_SRC emacs-lisp
+
+(use-package doi-utils
+  :after org)
+
+#+END_SRC
+**** org-ref-bibtex
+#+BEGIN_SRC emacs-lisp
+
+(use-package org-ref-bibtex
+  :after org
+  :init
+  (setq org-ref-bibtex-hydra-key-binding "\C-cj"))
+
+#+END_SRC
+**** ob-async
+#+BEGIN_SRC emacs-lisp
+
+(use-package ob-async
+  :ensure t)
+
+#+END_SRC
+**** ox-latex-subfigure
+#+BEGIN_SRC emacs-lisp
+
+(use-package ox-latex-subfigure
+  :init
+  (setq org-latex-prefer-user-labels t)
+  :load-path "~/.emacs.d/includes/ox-latex-subfigure/"
+  :config (require 'ox-latex-subfigure))
+
+#+END_SRC
 *** evil-mode
 #+BEGIN_SRC emacs-lisp
 
@@ -39,6 +117,33 @@
 
 ;(setq evil-want-C-i-jump nil)
 ;(define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
+
+#+END_SRC
+*** COMMENT company
+#+BEGIN_SRC emacs-lisp
+
+(use-package company
+  :defer t
+  :diminish (company-mode . "CPY")
+  :init
+    (add-hook 'after-init-hook 'global-company-mode)
+  :config
+  (setq company-minimum-prefix-length 2
+        company-selection-wrap-around t
+        company-show-numbers t
+        company-tooltip-align-annotations t
+        company-require-match nil
+        company-dabbrev-downcase nil
+        company-dabbprev-ignore-case nil))
+
+#+END_SRC
+*** paradox
+#+BEGIN_SRC emacs-lisp
+
+(use-package paradox
+  :ensure t
+  :config
+  (paradox-enable))
 
 #+END_SRC
 *** Theme
@@ -90,15 +195,19 @@
   (setq restart-emacs-restore-frames t))
 
 #+END_SRC
-*** org-bullets
+*** which-key
 #+BEGIN_SRC emacs-lisp
 
-(use-package org-bullets
+(use-package which-key
   :ensure t
+  :init
+  (setq which-key-separator " ")
+  (setq which-key-prefix-prefix "+")
   :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+  (which-key-mode 1))
 
 #+END_SRC
+
 *** Custom keybindings
 #+BEGIN_SRC emacs-lisp
 
@@ -190,15 +299,13 @@
 
 (use-package linum-relative
   :ensure t
+  :init
+  (progn
+    (setq linum-relative-format "%3s ")
+    ;; display current line instead of 0
+    (setq linum-relative-current-symbol ""))
   :config
-  (linum-relative-mode 1))
-
-#+END_SRC
-*** ob-async
-#+BEGIN_SRC emacs-lisp
-
-(use-package ob-async
-  :ensure t)
+  (linum-relative-global-mode))
 
 #+END_SRC
 *** Languages
@@ -215,7 +322,7 @@
   :ensure t)
 
 #+END_SRC
-**** Matlab
+**** COMMENT Matlab
 #+BEGIN_SRC emacs-lisp
 
 (use-package matlab-mode
@@ -282,7 +389,8 @@
    (python     . t)
    (ipython    . t)
    (julia      . t)
-   (matlab     . t)))
+   (matlab     . t)
+   (dot        . t)))
 
 #+END_SRC
 *** Display images
@@ -334,6 +442,12 @@
 #+BEGIN_SRC emacs-lisp
 
 (setq-default indent-tabs-mode nil)
+
+#+END_SRC
+** Line wrap globally
+#+BEGIN_SRC emacs-lisp
+
+(global-visual-line-mode 1)
 
 #+END_SRC
 * Custom functions
