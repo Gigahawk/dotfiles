@@ -34,6 +34,10 @@ export PATH=/opt/processing-3.3.6:$PATH
 # Add rust binaries to path
 export PATH=~/.cargo/bin:$PATH
 
+# Add esp32 toolchain to path
+export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
+export IDF_PATH="$HOME/esp/esp-idf"
+
 # Add miniconda to path
 #export PATH=~/miniconda3/bin:$PATH
 . ~/miniconda3/etc/profile.d/conda.sh
