@@ -38,6 +38,9 @@ export PATH=~/.cargo/bin:$PATH
 export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
 export IDF_PATH="$HOME/esp/esp-idf"
 
+export PATH="$PATH:$HOME/esp/esp-open-sdk/xtensa-lx106-elf/bin"
+
+
 # Add miniconda to path
 #export PATH=~/miniconda3/bin:$PATH
 . ~/miniconda3/etc/profile.d/conda.sh
