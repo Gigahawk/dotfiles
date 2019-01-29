@@ -43,6 +43,9 @@ export PATH="$PATH:$HOME/esp/esp-open-sdk/xtensa-lx106-elf/bin"
 # Add flatpak Slack to path
 export PATH="$PATH:$HOME/.local/share/flatpak/app/com.slack.Slack/current/active/export/bin/"
 
+# Add flatpak Discord to path
+export PATH="$PATH:$HOME/.local/share/flatpak/app/com.discordapp.Discord/current/active/export/bin/"
+
 # Add miniconda to path
 #export PATH=~/miniconda3/bin:$PATH
 . ~/miniconda3/etc/profile.d/conda.sh
