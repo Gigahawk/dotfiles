@@ -103,6 +103,21 @@
   :config (require 'ox-latex-subfigure))
 
 #+END_SRC
+**** ox-gfm
+#+BEGIN_SRC emacs-lisp
+
+(use-package ox-gfm
+  :ensure t)
+
+#+END_SRC
+
+*** htmlize
+#+BEGIN_SRC emacs-lisp
+
+(use-package htmlize
+  :ensure t)
+
+#+END_SRC
 *** evil-mode
 #+BEGIN_SRC emacs-lisp
 
@@ -322,7 +337,7 @@
   :ensure t)
 
 #+END_SRC
-**** COMMENT Matlab
+**** Matlab
 #+BEGIN_SRC emacs-lisp
 
 (use-package matlab-mode
@@ -393,11 +408,68 @@
    (dot        . t)))
 
 #+END_SRC
+*** Enable source highlighting for ipython
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'org-latex-minted-langs '(ipython "python"))
+
+#+END_SRC
 *** Display images
 #+BEGIN_SRC emacs-lisp
 
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
 (add-hook 'org-mode-hook 'org-display-inline-images)
+
+#+END_SRC
+** Export settings
+*** Backends
+**** ox-md
+#+BEGIN_SRC emacs-lisp
+
+(eval-after-load "org"
+  '(require 'ox-md nil t))
+
+#+END_SRC
+**** ox-gfm
+#+BEGIN_SRC emacs-lisp
+
+(eval-after-load "org"
+  '(require 'ox-gfm nil t))
+
+#+END_SRC
+*** 1 inch LaTeX margins
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'org-latex-packages-alist '("margin=1in" "geometry" nil))
+
+#+END_SRC
+*** Hide links on LaTeX export
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'org-latex-default-packages-alist
+             '("hidelinks" "hyperref" nil))
+
+#+END_SRC
+*** Enable minted
+#+BEGIN_SRC emacs-lisp
+
+(setq org-latex-listings 'minted)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
+#+END_SRC
+*** Enable SVG embeds
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'org-latex-packages-alist '("" "svg"))
+
+#+END_SRC
+*** COMMENT Enable float
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'org-latex-packages-alist '("" "float"))
 
 #+END_SRC
 * UI Settings
@@ -473,3 +545,10 @@
 
 #+END_SRC
 
+** Disable background for python variables and numbers
+#+BEGIN_SRC emacs-lisp
+
+(setq py-number-face nil)
+(setq py-variable-name-face nil)
+
+#+END_SRC
