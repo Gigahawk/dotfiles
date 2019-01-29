@@ -9,7 +9,7 @@ cmd=$(
 	IFS=:
 	if stest -dqr -n "$cache" $PATH; then
 		stest -flx $PATH | sort -u > "$cache"
-    cat ~/.bash_aliases | sed \
+    cat ~/.zaliases | sed \
       -e '/^$/d' `# Delete blank lines `\
       -e '/^\#/d' `# Delete lines starting with '#'`\
       -e 's/alias\ //' `# Remove leading 'alias '`\
@@ -21,5 +21,5 @@ cmd=$(
 
 echo $cmd
 
-echo -e "source ~/.bash_aliases \n $cmd" | bash -O expand_aliases &
+echo -e "source ~/.zaliases \n $cmd" | bash -O expand_aliases &
 
