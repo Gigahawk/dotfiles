@@ -46,6 +46,9 @@ export PATH="$PATH:$HOME/.local/share/flatpak/app/com.slack.Slack/current/active
 # Add flatpak Discord to path
 export PATH="$PATH:$HOME/.local/share/flatpak/app/com.discordapp.Discord/current/active/export/bin/"
 
+# Add opam binaries to path
+export PATH="$PATH:$HOME/.opam/default/bin/"
+
 # Add miniconda to path
 #export PATH=~/miniconda3/bin:$PATH
 . ~/miniconda3/etc/profile.d/conda.sh
