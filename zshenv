@@ -50,6 +50,9 @@ export PATH="$PATH:$HOME/.local/share/flatpak/app/com.discordapp.Discord/current
 #export PATH=~/miniconda3/bin:$PATH
 . ~/miniconda3/etc/profile.d/conda.sh
 
+# Add quartus to path
+export PATH="$PATH:$HOME/altera/13.0sp1/quartus/bin"
+
 # Add openscad libraries
 export OPENSCADPATH=$HOME/.openscad
 
