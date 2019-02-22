@@ -405,7 +405,8 @@
    (ipython    . t)
    (julia      . t)
    (matlab     . t)
-   (dot        . t)))
+   (dot        . t)
+   (latex      . t)))
 
 #+END_SRC
 *** Enable source highlighting for ipython
