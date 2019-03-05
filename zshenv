@@ -59,6 +59,9 @@ export PATH="$PATH:$HOME/altera/13.0sp1/quartus/bin"
 # Add openscad libraries
 export OPENSCADPATH=$HOME/.openscad
 
+# Source fff config
+source $HOME/.dotfiles/fff_config
+
 # Add perl binaries to path
 PATH="/home/jasper/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/jasper/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
