@@ -25,6 +25,9 @@ alias pbpaste="xclip -selection clipboard -o"
 alias pbselect="xclip -selection primary -o"
 alias pbselectin="xclip -selection primary"
 
+# Use bat instead of cat
+alias cat=bat
+
 #Gopass aliases
 alias gogen="gopass generate -x -xs=\"-\""
 
