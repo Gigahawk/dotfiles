@@ -34,3 +34,6 @@
 [submodule "giga-emacs/includes/ox-latex-subfigure"]
 	path = giga-emacs/includes/ox-latex-subfigure
 	url = https://github.com/linktohack/ox-latex-subfigure
+[submodule "torque"]
+	path = torque
+	url = https://github.com/dylanaraps/torque.git
