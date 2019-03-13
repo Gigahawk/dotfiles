@@ -37,3 +37,6 @@
 [submodule "torque"]
 	path = torque
 	url = https://github.com/dylanaraps/torque.git
+[submodule "st"]
+	path = st
+	url = https://github.com/LukeSmithxyz/st.git

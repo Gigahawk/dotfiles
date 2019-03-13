@@ -10,6 +10,8 @@
     - [mkdir -p ~/Downloads]
     - [mkdir -p ~/Pictures]
     - [curl ix.io/client > bin/ix && chmod +x bin/ix]
+    - [make -C st]
+    - [sudo make install -C st]
 
 - link:
     ~/.dotfiles: ''
