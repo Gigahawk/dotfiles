@@ -28,7 +28,6 @@ function! UserInit()
   Plug 'junegunn/seoul256.vim'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'w0rp/ale'
-  Plug 'lervag/vimtex'
   Plug 'PotatoesMaster/i3-vim-syntax'
   Plug 'sirtaj/vim-openscad'
   Plug 'wannesm/wmgraphviz.vim'
