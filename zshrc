@@ -23,3 +23,5 @@ if [ -f ~/.zaliases ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(thefuck --alias)
