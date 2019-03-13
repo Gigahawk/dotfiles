@@ -9,11 +9,13 @@
     - [ln -sfn /media ~/media]
     - [mkdir -p ~/Downloads]
     - [mkdir -p ~/Pictures]
+    - [curl ix.io/client > bin/ix && chmod +x bin/ix]
 
 - link:
     ~/.dotfiles: ''
     ~/.bin: bin
     ~/.vimrc: space-vim/init.vim
+    ~/.config/nvim/init.vim: space-vim/init.vim
     ~/.space-vim: space-vim
     ~/.spacevim: spacevim
     ~/.Xdefaults: Xdefaults
