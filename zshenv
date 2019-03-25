@@ -1,10 +1,5 @@
 typeset -U path
 
-# Add texlive 2018 to path
-path=('/usr/local/texlive/2018/bin/x86_64-linux' $path)
-export INFOPATH=$INFOPATH:/usr/local/texlive/2018/texmf-dist/doc/info
-export MANPATH=$MANPATH:/usr/local/texlive/2018/texmf-dist/man
-
 # Add scripts folder to path
 path=("$HOME/.bin" $path)
 
