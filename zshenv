@@ -13,6 +13,9 @@ export NVM_DIR="$HOME/.nvm"
 # Add aws cli to path
 export PATH=~/.local/bin:$PATH
 
+# Add matlab to path
+export PATH=/usr/local/MATLAB/R2019a/bin:$PATH
+
 # Add Android Studio to path
 #export PATH=/opt/android-studio/bin:$PATH
 
