@@ -113,6 +113,7 @@ clucene
 cmake
 coin3
 colord-devel
+colord-gtk
 compton
 confuse
 connman
@@ -132,6 +133,7 @@ cura-fdm-materials
 curl
 cyrus-sasl
 cyrus-sasl-modules
+darktable
 dash
 davmail
 dbus
@@ -163,6 +165,7 @@ dnssec-anchors
 docbook-xml
 docbook-xsl
 docker
+dos2unix
 dosfstools
 double-conversion
 doxygen
@@ -204,6 +207,7 @@ findutils
 firefox
 flatpak
 flex
+flickcurl
 fltk
 font-adobe-100dpi
 font-adobe-75dpi
@@ -248,6 +252,7 @@ freetype-32bit
 freetype-devel
 fribidi
 fribidi-devel
+fsharp
 fuse
 fuse-exfat
 fuse-sshfs
@@ -323,6 +328,7 @@ gparted
 gperf
 gpgme
 gpgmepp
+gradle
 graphite
 graphite-devel
 graphviz
@@ -371,6 +377,7 @@ harfbuzz-devel
 hdf5
 help2man
 hicolor-icon-theme
+hidapi
 hostapd
 hplip
 htop
@@ -453,6 +460,7 @@ lapack-devel
 lcms2
 lcms2-32bit
 lcms2-devel
+lensfun
 leptonica
 less
 libArcus
@@ -736,6 +744,8 @@ libldns
 libllvm6.0
 libllvm7
 libllvm7-32bit
+libllvm8
+libllvm8-32bit
 libltdl
 libltdl-32bit
 liblz4
@@ -806,6 +816,7 @@ libopenexr
 libopenjpeg2
 libopenmpi
 liborcus
+libosmgpsmap
 libostree
 libotf
 libpagemaker
@@ -825,8 +836,10 @@ libplist
 libpng
 libpng-32bit
 libpng-devel
+libpng-progs
 libpng12-32bit
 libpoppler86
+libpoppler87
 libpostproc
 libpotrace
 libprotobuf18
@@ -836,6 +849,7 @@ libpulseaudio
 libpulseaudio-32bit
 libpwquality
 libpyside-python
+libpyside2-python3
 libqhull
 libqpdf
 libquadmath
@@ -877,9 +891,12 @@ libsasl
 libsasl-32bit
 libseccomp
 libsecret
+libselinux
 libsensors
+libsepol
 libserialport
 libshiboken-python
+libshiboken2
 libsigc++
 libsigc++-devel
 libsigrok
@@ -1046,7 +1063,6 @@ minizip
 mit-krb5-libs
 mkfontscale
 moc
-mongodb
 mono
 mono-basic
 mono-devel
@@ -1057,6 +1073,7 @@ mpd
 mpfr
 mpfr-devel
 mplayer
+msbuild-bin
 msgpack
 msmtp
 mtdev
@@ -1273,6 +1290,7 @@ python-PyQt5-devel
 python-PyQt5-quick
 python-Twisted
 python-alsa
+python-appdirs
 python-asn1crypto
 python-attrs
 python-automat
@@ -1303,7 +1321,6 @@ python-ipaddress
 python-kiwisolver
 python-lxml
 python-matplotlib
-python-matplotlib-data
 python-msgpack
 python-neovim
 python-numpy
@@ -1347,6 +1364,7 @@ python3-PyQt5-webengine
 python3-PyQt5-webkit
 python3-Pygments
 python3-aiohttp
+python3-appdirs
 python3-async-timeout
 python3-attrs
 python3-blinker
@@ -1355,6 +1373,8 @@ python3-chardet
 python3-colorama
 python3-cups
 python3-cupshelpers
+python3-cycler
+python3-dateutil
 python3-dbus
 python3-decorator
 python3-devel
@@ -1365,20 +1385,26 @@ python3-httplib2
 python3-idna
 python3-idna-ssl
 python3-ifaddr
+python3-kiwisolver
 python3-lxml
 python3-magic
+python3-matplotlib
+python3-matplotlib-data
 python3-msgpack
 python3-multidict
 python3-natsort
 python3-neovim
 python3-numpy
 python3-numpy-stl
+python3-parsing
 python3-pip
+python3-pivy
 python3-protobuf
 python3-psutil
 python3-pyPEG2
 python3-pylast
 python3-pyserial
+python3-pyside2
 python3-pyte
 python3-requests
 python3-scipy
@@ -1408,8 +1434,12 @@ qt-devel-tools
 qt-plugin-sqlite
 qt-webkit
 qt5
+qt5-3d
+qt5-charts
+qt5-datavis3d
 qt5-declarative
 qt5-devel
+qt5-gamepad
 qt5-graphicaleffects
 qt5-host-tools
 qt5-imageformats
@@ -1421,14 +1451,17 @@ qt5-quickcontrols
 qt5-quickcontrols2
 qt5-quickcontrols2-devel
 qt5-script
+qt5-scxml
 qt5-sensors
 qt5-serialport
+qt5-speech
 qt5-svg
 qt5-tools
 qt5-translations
 qt5-webchannel
 qt5-webengine
 qt5-webkit
+qt5-websockets
 qt5-x11extras
 qt5-xmlpatterns
 qtchooser
@@ -1483,6 +1516,7 @@ solvespace
 sonnet
 soundtouch
 sox
+spandsp
 speexdsp
 speexdsp-32bit
 spice-gtk
@@ -1578,7 +1612,6 @@ wine-32bit
 wine-gecko
 wine-mono
 winetricks
-wiredtiger
 wireless_tools
 wireshark
 wireshark-qt
@@ -1586,6 +1619,7 @@ wkhtmltopdf
 wlroots
 wpa_supplicant
 wxPython
+wxPython-devel
 wxWidgets
 wxWidgets-common
 wxWidgets-common-devel
