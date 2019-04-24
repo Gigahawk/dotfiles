@@ -90,4 +90,6 @@
     ~/.gitignore_global: gitignore_global
     ~/.arduino15: arduino15
     ~/.xournalpp: xournalpp
-    ~/.x49gp: x49gp_config
+    ~/.x49gp/flash:
+      create: true
+      path: x49gp_flash
