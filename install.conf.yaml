@@ -14,6 +14,7 @@
     - [sudo make install -C st]
     - [make -C x49gp]
     - [sudo make install -C x49gp]
+    - [echo "repository=$HOME/.xbps_libselinux" | sudo tee /etc/xbps.d/local_libselinux.conf]
 
 - link:
     ~/.dotfiles: ''
@@ -93,3 +94,4 @@
     ~/.x49gp/flash:
       create: true
       path: x49gp_flash
+    ~/.xbps_libselinux: xbps_libselinux

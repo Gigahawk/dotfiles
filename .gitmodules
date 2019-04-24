@@ -43,3 +43,6 @@
 [submodule "x49gp"]
 	path = x49gp
 	url = https://github.com/Gigahawk/x49gp
+[submodule "xbps_libselinux"]
+	path = xbps_libselinux
+	url = git@github.com:Gigahawk/xbps_libselinux.git
