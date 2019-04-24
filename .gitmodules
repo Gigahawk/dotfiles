@@ -40,3 +40,6 @@
 [submodule "st"]
 	path = st
 	url = https://github.com/LukeSmithxyz/st.git
+[submodule "x49gp"]
+	path = x49gp
+	url = https://github.com/Gigahawk/x49gp

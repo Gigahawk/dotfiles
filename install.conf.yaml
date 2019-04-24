@@ -12,6 +12,8 @@
     - [curl ix.io/client > bin/ix && chmod +x bin/ix]
     - [make -C st]
     - [sudo make install -C st]
+    - [make -C x49gp]
+    - [sudo make install -C x49gp]
 
 - link:
     ~/.dotfiles: ''
@@ -88,3 +90,4 @@
     ~/.gitignore_global: gitignore_global
     ~/.arduino15: arduino15
     ~/.xournalpp: xournalpp
+    ~/.x49gp: x49gp_config
