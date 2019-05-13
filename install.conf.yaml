@@ -10,6 +10,7 @@
     - [mkdir -p ~/Downloads]
     - [mkdir -p ~/Pictures]
     - [curl ix.io/client > bin/ix && chmod +x bin/ix]
+    - ["curl https://storage.googleapis.com/git-repo-downloads/repo > bin/repo && chmod +x bin/repo"]
     - [make -C st]
     - [sudo make install -C st]
     - [make -C x49gp]
