@@ -49,7 +49,9 @@ export PATH="$PATH:$HOME/.opam/default/bin/"
 
 # Add miniconda to path
 #export PATH=~/miniconda3/bin:$PATH
-. ~/miniconda3/etc/profile.d/conda.sh
+if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+    . ~/miniconda3/etc/profile.d/conda.sh
+fi
 
 # Add quartus to path
 export PATH="$PATH:$HOME/altera/13.0sp1/quartus/bin"
