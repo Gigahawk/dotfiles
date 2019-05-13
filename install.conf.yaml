@@ -20,7 +20,9 @@
     ~/.dotfiles: ''
     ~/.bin: bin
     ~/.vimrc: space-vim/init.vim
-    ~/.config/nvim/init.vim: space-vim/init.vim
+    ~/.config/nvim/init.vim:
+      create: true
+      path: space-vim/init.vim
     ~/.space-vim: space-vim
     ~/.spacevim: spacevim
     ~/.Xdefaults: Xdefaults
