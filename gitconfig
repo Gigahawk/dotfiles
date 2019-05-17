@@ -4,3 +4,8 @@
 [core]
 	editor = vim
 	excludesfile = /home/jasper/.gitignore_global
+[color]
+	ui = auto
+[alias]
+    todo = "!f() { git commit --allow-empty -m \"TODO: $*\"; }; f"
+
