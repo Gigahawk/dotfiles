@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Show hidden items by default
+export FFF_HIDDEN=1
+
 export EDITOR="mimeopen"
 
 export FFF_OPENER="xdg-open"
