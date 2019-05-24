@@ -13,6 +13,8 @@ export FFF_MARK_FORMAT="> %f"
 
 export FFF_OPENER="mimeopen"
 
+export FFF_KEY_REFRESH="R"
+
 f() {
   fff "$@"
   cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
