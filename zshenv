@@ -30,7 +30,7 @@ export PATH=~/.pub-cache/bin:$PATH
 export PATH=/opt/processing-3.3.6:$PATH
 
 # Add rust binaries to path
-export PATH=~/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Add esp32 toolchain to path
 export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
@@ -61,6 +61,9 @@ export OPENSCADPATH=$HOME/.openscad
 
 # Source fff config
 source $HOME/.dotfiles/fff_config
+
+# Add poetry to path
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # Add perl binaries to path
 PATH="/home/jasper/perl5/bin${PATH:+:${PATH}}"; export PATH;
