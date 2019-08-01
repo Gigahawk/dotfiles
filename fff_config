@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Show hidden items by default
+export FFF_HIDDEN=1
+
 export EDITOR="mimeopen"
 
 export FFF_OPENER="xdg-open"
@@ -9,6 +12,8 @@ export FFF_CD_ON_EXIT=1
 export FFF_MARK_FORMAT="> %f"
 
 export FFF_OPENER="mimeopen"
+
+export FFF_KEY_REFRESH="R"
 
 f() {
   fff "$@"

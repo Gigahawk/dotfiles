@@ -1,6 +1,8 @@
 # Load antigen
-
 source $HOME/.dotfiles/antigen/bin/antigen.zsh
+
+# Enable vim command editing
+autoload -U edit-command-line
 
 # Use Oh My ZSH
 antigen use oh-my-zsh

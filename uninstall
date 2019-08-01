@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
+import imp
+# Use dotbot to inject yaml
+imp.load_source("dotbot_bin", "./dotbot/bin/dotbot")
+import yaml
+import os
+
+CONFIG = "install.conf.yaml"
+
+stream = open(CONFIG, "r")
+conf = yaml.load(stream)
+
+for section in conf:
+    if "link" in section:
+        for target in section["link"]:
+            realpath = os.path.expanduser(target)
+            if os.path.islink(realpath):
+                print("Removing ", realpath)
+                os.unlink(realpath)
+
+# Cleanup pyc file from imp.load_source
+os.remove("./dotbot/bin/dotbotc")
