@@ -19,3 +19,7 @@ elif [[ -f /usr/bin/iceweasel ]]; then
 else
 	export BROWSER="firefox"
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
