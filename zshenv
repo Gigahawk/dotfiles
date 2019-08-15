@@ -65,6 +65,9 @@ source $HOME/.dotfiles/fff_config
 # Add poetry to path
 export PATH="$HOME/.poetry/bin:$PATH"
 
+# Enable scrcpy
+export SCRCPY_SERVER_PATH=/usr/share/scrcpy/scrcpy-server-v1.9.jar
+
 # Add perl binaries to path
 PATH="/home/jasper/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/jasper/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
