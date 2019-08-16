@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Caching locally installed packages"
-xpkg > xbps_pkglist
+xpkg -m > xbps_pkglist
 
 echo "Checking if package list is valid"
 ./xbps_install_pkglist.sh -n
