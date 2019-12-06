@@ -1,0 +1,7 @@
+#!/bin/bash
+xsetwacom set "Serial Wacom Tablet WACf00c stylus" Area 210 116 26320 16440
+xsetwacom set "Serial Wacom Tablet WACf00c eraser" Area 210 116 26320 16440
+
+xsetwacom set "Serial Wacom Tablet WACf00c stylus" Threshold 500
+#lmao this isnt enough
+xsetwacom set "Serial Wacom Tablet WACf00c eraser" Threshold 1000

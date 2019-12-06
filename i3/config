@@ -55,7 +55,7 @@ exec_always --no-startup-id syncthing-inotify
 #Start CopyQ
 #exec_always --no-startup-id copyq
 #Set wacom configuration things
-exec_always --no-startup-id ~/.config/Scripts/set-wacom.sh
+exec_always --no-startup-id ~/.bin/set_wacom
 #Automount USB drives:
 #exec_always --no-startup-id ~/.config/i3/lock.sh
 exec_always --no-startup-id devmon
