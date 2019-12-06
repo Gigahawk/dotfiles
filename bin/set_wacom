@@ -5,3 +5,7 @@ xsetwacom set "Serial Wacom Tablet WACf00c eraser" Area 210 116 26320 16440
 xsetwacom set "Serial Wacom Tablet WACf00c stylus" Threshold 500
 #lmao this isnt enough
 xsetwacom set "Serial Wacom Tablet WACf00c eraser" Threshold 1000
+
+# Attempt to fix touchscreen jitter
+xsetwacom --set "Serial Wacom Tablet WACf00c touch" Suppress 10                                                    ~λ ›
+xsetwacom --set "Serial Wacom Tablet WACf00c touch" RawSample 16
