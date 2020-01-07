@@ -46,6 +46,11 @@ alias yt="youtube-dl -ic"
 alias yta="youtube-dl -xic"
 alias ytm="youtube-dl -x --audio-quality 0 --audio-format mp3"
 
+# Use exa instead of ls if available
+if type "exa" > /dev/null; then
+  alias ls="exa"
+fi
+
 #Some aliases
 alias v="vim"
 
