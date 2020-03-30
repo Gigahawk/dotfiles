@@ -52,6 +52,9 @@
     ~/.config/cura:
       create: true
       path: cura/
+    ~/.config/mopidy:
+      create: true
+      path: mopidy/
     ~/.local/share/cura/3.4/plugins/CustomSupports:
       create: true
       path: misc/cura-custom-supports/files/plugins/CustomSupports/
