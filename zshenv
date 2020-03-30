@@ -14,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=~/.local/bin:$PATH
 
 # Add matlab to path
-export PATH=/usr/local/MATLAB/R2019a/bin:$PATH
+export PATH=/usr/local/MATLAB/R2019b/bin:$PATH
 
 # Add Android Studio to path
 #export PATH=/opt/android-studio/bin:$PATH
