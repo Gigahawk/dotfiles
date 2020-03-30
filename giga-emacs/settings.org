@@ -549,6 +549,19 @@ a unique id will be associated to it."
 (add-to-list 'org-latex-packages-alist '("" "svg"))
 
 #+END_SRC
+*** Enable siunitx
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'org-latex-packages-alist '("" "siunitx"))
+
+#+END_SRC
+*** Fix paragraph spacing/indentation
+#+BEGIN_SRC emacs-lisp
+
+; Including parskip automatically removes indentation and adds spacing between paragraphs
+(add-to-list 'org-latex-packages-alist '("" "parskip"))
+
+#+END_SRC
 *** COMMENT Enable float
 #+BEGIN_SRC emacs-lisp
 
