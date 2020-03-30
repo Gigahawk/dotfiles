@@ -85,6 +85,66 @@
             {
                "name":"Archim",
                "architecture":"sam",
+               "version":"1.6.9-d",
+               "category":"Contributed",
+               "url":"https://github.com/ultimachine/ArchimAddons/releases/download/v1.6.9-d/archim-1.6.9-d.zip",
+               "archiveFileName":"archim-1.6.9-d.zip",
+               "checksum":"SHA-256:20edd3484cc502d814bc3055aad7b3f47addc995f73e0dbd76834173cb96018e",
+               "size":"18088981",
+               "help":{
+                  "online":"https://github.com/ultimachine/Archim/wiki"
+               },
+               "boards":[
+                        {
+                                 "name":"Archim"
+                        }
+               ],
+                "toolsDependencies": [
+                        {
+                                "packager": "arduino",
+                                "name": "arm-none-eabi-gcc",
+                                "version": "4.8.3-2014q1"
+                        },
+                        {
+                                "packager": "arduino",
+                                "name": "bossac",
+                                "version": "1.7.0"
+                        }
+                ]
+            },
+            {
+               "name":"Archim",
+               "architecture":"sam",
+               "version":"1.6.9-c",
+               "category":"Contributed",
+               "url":"https://github.com/ultimachine/ArchimAddons/releases/download/v1.6.9-c/archim-1.6.9-c.zip",
+               "archiveFileName":"archim-1.6.9-c.zip",
+               "checksum":"SHA-256:d41c33520dbdfe9b563290a4e1380a833f330d8b9b7f7713ef89d188ba97d3c9",
+               "size":"18088968",
+               "help":{
+                  "online":"https://github.com/ultimachine/Archim/wiki"
+               },
+               "boards":[
+                        {
+                                 "name":"Archim"
+                        }
+               ],
+                "toolsDependencies": [
+                        {
+                                "packager": "arduino",
+                                "name": "arm-none-eabi-gcc",
+                                "version": "4.8.3-2014q1"
+                        },
+                        {
+                                "packager": "arduino",
+                                "name": "bossac",
+                                "version": "1.7.0"
+                        }
+                ]
+            },
+            {
+               "name":"Archim",
+               "architecture":"sam",
                "version":"1.6.9-b",
                "category":"Contributed",
                "url":"https://github.com/ultimachine/ArchimAddons/files/628295/archim-1.6.9-b.zip",
