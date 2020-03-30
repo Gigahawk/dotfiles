@@ -79,6 +79,9 @@
     ~/.config/dunst:
       create: true
       path: dunst
+    ~/.ncmpcpp:
+      create: true
+      path: ncmpcpp
     ~/.openscad: openscad-libs
     ~/.xournal/config:
       create: true
