@@ -77,6 +77,8 @@
     ~/.config/dunst:
       create: true
       path: dunst
+    ~/.config/redshift.conf:
+      path: redshift.conf
     ~/.ncmpcpp:
       create: true
       path: ncmpcpp
