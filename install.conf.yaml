@@ -18,10 +18,11 @@
 - link:
     ~/.dotfiles: ''
     ~/.bin: bin
-    ~/.vimrc: space-vim/init.vim
+    #~/.vimrc: space-vim/init.vim
+    ~/.vimrc: giga-vim
     ~/.config/nvim/init.vim:
       create: true
-      path: space-vim/init.vim
+      path: giga-vim
     ~/.space-vim: space-vim
     ~/.spacevim: spacevim
     ~/.Xdefaults: Xdefaults
