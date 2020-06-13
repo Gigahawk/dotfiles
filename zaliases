@@ -3,7 +3,6 @@ alias matlab="matlab -nodesktop"
 
 #alias android-studio="studio.sh"
 
-alias telegram="Telegram"
 alias freecad="FreeCAD"
 alias freecad-cmd="FreeCADCmd"
 
