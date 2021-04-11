@@ -65,7 +65,7 @@ exec --no-startup-id sleep 10 && mpd
 #Torrent daemon:
 #exec --no-startup-id transmission-daemon
 #Wifi applet:
-exec --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet
 #Bluetooth applet:
 exec --no-startup-id blueman-applet
 #Mount other drives:
