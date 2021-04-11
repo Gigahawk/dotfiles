@@ -56,6 +56,7 @@ exec_always --no-startup-id syncthing-inotify
 #exec_always --no-startup-id copyq
 #Set wacom configuration things
 exec_always --no-startup-id ~/.bin/set_wacom
+exec_always --no-startup-id ~/.bin/disable_trackpad
 #Automount USB drives:
 #exec_always --no-startup-id ~/.config/i3/lock.sh
 exec_always --no-startup-id devmon
