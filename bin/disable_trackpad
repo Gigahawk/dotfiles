@@ -1,0 +1,7 @@
+#!/bin/bash
+trackpad_ids=$(get_trackpad_ids)
+
+while IFS= read -r id; do
+    xinput --disable $id
+done <<< "$trackpad_ids"
+
