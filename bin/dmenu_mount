@@ -6,15 +6,18 @@ drives=$(lsblk -lp | sed '/part/!d')
 removeable=""
 
 while IFS=$'\t' read -r line; do
+  mmc=
   row=($line)
   rm="${row[2]}"
-  if [ "$rm" -eq 1 ]; then
-    #cols=$(echo "$line" | sed -r 's/(\/dev\/sd[a-z][0-9]{1,})[[:space:]]*[0-9]{1,}:[0-9]{1,}[[:space:]]*([01])[[:space:]]*([0-9\.]*[A-Z])[[:space:]]*([01])[[:space:]]part[[:space:]]*?(.*)//')
-    dev=${row[0]}
-    size=${row[3]}
-    ro=${row[4]}
-    mount=${row[6]}
-    entry="$dev ($size)"
+  #cols=$(echo "$line" | sed -r 's/(\/dev\/sd[a-z][0-9]{1,})[[:space:]]*[0-9]{1,}:[0-9]{1,}[[:space:]]*([01])[[:space:]]*([0-9\.]*[A-Z])[[:space:]]*([01])[[:space:]]part[[:space:]]*?(.*)//')
+  dev=${row[0]}
+  size=${row[3]}
+  ro=${row[4]}
+  mount=${row[6]}
+  entry="$dev ($size)"
+  echo $entry
+  if [ "$rm" -eq 1 ] || [[ $dev =~ ^/dev/mmcblk.* ]]; then
+    echo "rm"
     if [ ! -z "$mount" ]; then
       entry+=" on $mount"
     fi
@@ -36,8 +39,8 @@ drive=${selection[0]}
 mount=${selection[3]}
 if [ -z "$mount" ]; then
   # not mounted, mount
-  udevil mount $drive
+  udisksctl mount -b $drive --no-user-interaction
 else
-  udevil umount $drive
+  udisksctl unmount -b $drive --no-user-interaction
 fi
 
