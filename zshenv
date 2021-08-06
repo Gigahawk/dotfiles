@@ -1,5 +1,7 @@
 typeset -U path
 
+export BROWSER="firefox"
+
 # Add scripts folder to path
 path=("$HOME/.bin" $path)
 
