@@ -14,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=~/.local/bin:$PATH
 
 # Add matlab to path
-export PATH=/usr/local/MATLAB/R2019b/bin:$PATH
+export PATH="$HOME/MATLAB/bin:$PATH"
 
 # Add Android Studio to path
 #export PATH=/opt/android-studio/bin:$PATH
@@ -38,12 +38,6 @@ export IDF_PATH="$HOME/esp/esp-idf"
 
 export PATH="$PATH:$HOME/esp/esp-open-sdk/xtensa-lx106-elf/bin"
 
-# Add flatpak Slack to path
-export PATH="$PATH:$HOME/.local/share/flatpak/app/com.slack.Slack/current/active/export/bin/"
-
-# Add flatpak Discord to path
-export PATH="$PATH:$HOME/.local/share/flatpak/app/com.discordapp.Discord/current/active/export/bin/"
-
 # Add opam binaries to path
 export PATH="$PATH:$HOME/.opam/default/bin/"
 
@@ -65,6 +59,9 @@ source $HOME/.dotfiles/fff_config
 # Add poetry to path
 export PATH="$HOME/.poetry/bin:$PATH"
 
+# Add go binaries to path
+export PATH="$HOME/go/bin:$PATH"
+
 # Enable scrcpy
 export SCRCPY_SERVER_PATH=/usr/share/scrcpy/scrcpy-server-v1.9.jar
 
@@ -74,3 +71,7 @@ PERL5LIB="/home/jasper/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LI
 PERL_LOCAL_LIB_ROOT="/home/jasper/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/jasper/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jasper/perl5"; export PERL_MM_OPT;
+export PATH="/home/jasper/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+

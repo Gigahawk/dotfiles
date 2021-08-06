@@ -28,13 +28,7 @@ alias pbselectin="xclip -selection primary"
 alias cat=bat
 
 #Gopass aliases
-alias gogen="gopass generate -x -xs=\"-\""
-
-#Alias flatpak Slack bin name
-alias slack="com.slack.Slack"
-
-#Alias flatpak Discord bin name
-alias discord="com.discordapp.Discord"
+alias gogen="gopass generate -g xkcd -xs=\"-\""
 
 # Sensible defaults for dmenu
 alias dmenu="dmenu_wrapper"
