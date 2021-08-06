@@ -95,22 +95,17 @@
 #+END_SRC
 **** ox-latex-subfigure
 #+BEGIN_SRC emacs-lisp
-
 (use-package ox-latex-subfigure
   :init
   (setq org-latex-prefer-user-labels t)
   :load-path "~/.emacs.d/includes/ox-latex-subfigure/"
   :config (require 'ox-latex-subfigure))
-
 #+END_SRC
 **** ox-gfm
 #+BEGIN_SRC emacs-lisp
-
 (use-package ox-gfm
   :ensure t)
-
 #+END_SRC
-
 
 *** htmlize
 #+BEGIN_SRC emacs-lisp
@@ -124,6 +119,8 @@
 
 (use-package evil
   :ensure t
+  :init
+    (setq evil-want-C-i-jump nil)
   :config
   (evil-mode 1))
 
@@ -239,6 +236,7 @@
 	   ":"     '(helm-M-x :which-key "M-x")
 	   ;; File operations
 	   "f"     '(:prefix t :which-key "files")
+	   "fc"    '((lambda () (interactive) (find-file "~/.emacs.d/settings.org")) :which-key "open config")
 	   "ff"    '(helm-find-files :which-key "open files")
 	   "fr"    '(helm-recentf :which-key "recent files")
 	   ;; Buffer operations
@@ -259,6 +257,7 @@
 	   "q"     '(:prefix t :which-key "Quit/Restart")
 	   "qq"    '(save-buffers-kill-terminal :which-key "quit")
 	   "qr"    '(restart-emacs :which-key "restart")
+	   "qp"    '(delete-process-interactive :which-key "kill subprocess")
 	   ;; Misc
 	   "at"    '(ansi-term :which-key "open terminal")))
 
@@ -365,6 +364,12 @@
 (setq org-startup-indented t)
 
 #+END_SRC
+** Allow alphabetical ordered lists
+#+BEGIN_SRC emacs-lisp
+
+(setq org-list-allow-alphabetical t)
+
+#+END_SRC
 ** Source block indentation
 #+BEGIN_SRC emacs-lisp
 (setq org-src-fontify-natively t
@@ -406,6 +411,7 @@
    (ipython    . t)
    (julia      . t)
    (matlab     . t)
+   (shell      . t)
    (dot        . t)
    (latex      . t)))
 
@@ -731,6 +737,17 @@ a unique id will be associated to it."
   (kill-buffer (current-buffer)))
 
 #+END_SRC
+** Interactive process killer
+#+BEGIN_SRC emacs-lisp
+
+(defun delete-process-interactive ()
+  (interactive)
+  (let ((pname (ido-completing-read "Process Name: " 
+                    (mapcar 'process-name (process-list)))))
+
+    (delete-process (get-process pname))))
+
+#+END_SRC
 * Misc
 ** Ensure path is setup properly
 #+BEGIN_SRC emacs-lisp
@@ -743,11 +760,8 @@ a unique id will be associated to it."
 	 exec-path)))
 
 #+END_SRC
-
 ** Disable background for python variables and numbers
 #+BEGIN_SRC emacs-lisp
-
 (setq py-number-face nil)
 (setq py-variable-name-face nil)
-
 #+END_SRC
