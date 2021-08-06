@@ -13,7 +13,7 @@ let g:spacevim_plug_home = '~/.vim/plugged'
 " Enable the existing layers in space-vim
 let g:spacevim_layers = [
       \ 'fzf', 'unite', 'better-defaults',
-      \ 'which-key', 'ycmd'
+      \ 'which-key'
       \ ]
 
 " If you want to have more control over the layer, try using Layer command.
@@ -42,6 +42,7 @@ function! UserInit()
   map <C-j> <C-w>j
   map <C-k> <C-w>k
   map <C-l> <C-w>l
+
 endfunction
 
 " Override the default settings as well as adding extras
