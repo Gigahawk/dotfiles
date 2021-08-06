@@ -34,6 +34,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'ChristianChiarulli/codi.vim'
 
 call plug#end()
 
