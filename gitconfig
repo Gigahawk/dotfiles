@@ -9,3 +9,7 @@
 [alias]
     todo = "!f() { git commit --allow-empty -m \"TODO: $*\"; }; f"
 
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
