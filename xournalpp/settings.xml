@@ -4,13 +4,14 @@
   <property name="presureSensitivity" value="false"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Portrait"/>
-  <property name="lastSavePath.str()" value="file:///media/sd_main/Homework/Year%203/MECH%20360/Homework"/>
-  <property name="lastImagePath.str()" value=""/>
-  <property name="zoomStep" value="10.000"/>
-  <property name="zoomStepScroll" value="10.000"/>
-  <property name="displayDpi" value="124"/>
-  <property name="mainWndWidth" value="1280"/>
-  <property name="mainWndHeight" value="800"/>
+  <property name="lastSavePath" value="/home/jasper/media/sd_main/Homework/Year 3/MECH 431/Assignments/Final Project/report/invoices"/>
+  <property name="lastOpenPath" value="/home/jasper/media/sd_main/Homework/Year 3/MECH 431/Assignments/Final Project/report/invoices"/>
+  <property name="lastImagePath" value=""/>
+  <property name="zoomStep" value="10"/>
+  <property name="zoomStepScroll" value="2"/>
+  <property name="displayDpi" value="72"/>
+  <property name="mainWndWidth" value="1858"/>
+  <property name="mainWndHeight" value="995"/>
   <property name="maximized" value="false"/>
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="1"/>
@@ -40,11 +41,15 @@
   <property name="autosaveEnabled" value="false"/>
   <property name="autosaveTimeout" value="3"/>
   <property name="addHorizontalSpace" value="false"/>
+  <property name="addHorizontalSpaceAmount" value="150"/>
   <property name="addVerticalSpace" value="false"/>
+  <property name="addVerticalSpaceAmount" value="150"/>
+  <property name="drawDirModsEnabled" value="false"/>
+  <property name="drawDirModsRadius" value="50"/>
   <property name="snapRotation" value="true"/>
-  <property name="snapRotationTolerance" value="0.200"/>
+  <property name="snapRotationTolerance" value="0.20000000000000001"/>
   <property name="snapGrid" value="true"/>
-  <property name="snapGridTolerance" value="0.250"/>
+  <property name="snapGridTolerance" value="0.25"/>
   <property name="touchWorkaround" value="false"/>
   <property name="selectionBorderColor" value="16711680"/>
   <property name="backgroundColor" value="14473941"/>
@@ -57,11 +62,19 @@
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
   <property name="audioOutputDevice" value="-1"/>
-  <property name="audioSampleRate" value="44100.000"/>
-  <property name="audioGain" value="1.000"/>
+  <property name="audioSampleRate" value="44100"/>
+  <property name="audioGain" value="1"/>
   <property name="pluginEnabled" value=""/>
   <property name="pluginDisabled" value=""/>
-  <property name="font" font="Sans" size="12.0"/>
+  <property name="strokeFilterIgnoreTime" value="200"/>
+  <property name="strokeFilterIgnorePoints" value="8"/>
+  <property name="strokeFilterSuccessiveTime" value="500"/>
+  <property name="strokeFilterEnabled" value="false"/>
+  <property name="doActionOnStrokeFiltered" value="false"/>
+  <property name="experimentalInputSystemEnabled" value="false"/>
+  <property name="inputSystemTPCButton" value="false"/>
+  <property name="inputSystemDrawOutsideWindow" value="true"/>
+  <property name="font" font="Hack" size="14.5"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="000000"/>
@@ -107,7 +120,7 @@
     </data>
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="type" type="string" value="default"/>
     </data>
     <data name="hand">
@@ -124,11 +137,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="000000"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
-      <attribute name="fill" type="int" value="0"/>
-      <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="color" type="hex" value="ff0000"/>
+      <attribute name="drawingType" type="string" value="rectangle"/>
+      <attribute name="fill" type="int" value="1"/>
+      <attribute name="fillAlpha" type="int" value="255"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">

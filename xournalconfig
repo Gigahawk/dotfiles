@@ -13,9 +13,9 @@ window_maximize=false
 # start in full screen mode (true/false)
 window_fullscreen=false
 # the window width in pixels (when not maximized)
-window_width=1218
+window_width=1304
 # the window height in pixels
-window_height=718
+window_height=683
 # scrollbar step increment (in pixels)
 scrollbar_speed=30
 # the step increment in the zoom dialog box
@@ -39,7 +39,7 @@ touchscreen_as_hand_tool=true
 # disable touchscreen device when pen is in proximity (true/false) (requires separate pen and touch devices)
 pen_disables_touch=true
 # name of touchscreen device for touchscreen_as_hand_tool
-touchscreen_device_name=Serial Wacom Tablet WACf00c touch
+touchscreen_device_name=Wacom ISDv4 E6 Finger touch
 # buttons 2 and 3 switch mappings instead of drawing (useful for some tablets) (true/false)
 buttons_switch_mappings=false
 # automatically load filename.pdf.xoj instead of filename.pdf (true/false)
