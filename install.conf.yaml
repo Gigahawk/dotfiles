@@ -6,7 +6,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
-    - [ln -sfn /media ~/media]
+    - [ln -sfn /run/media/jasper/ ~/media]
     - [mkdir -p ~/Downloads]
     - [mkdir -p ~/Pictures]
     - [curl ix.io/client > bin/ix && chmod +x bin/ix]
@@ -105,4 +105,4 @@
       create: true
       path: x49gp_flash
     ~/.xbps_libselinux: xbps_libselinux
-    ~/.fomcon-matlab: fomcon-matlab
+    ~/fomcon-matlab: fomcon-matlab
