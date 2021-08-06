@@ -13,4 +13,5 @@ xset dpms 0 0 0
 xset s off
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 exec ck-launch-session i3
