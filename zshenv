@@ -77,3 +77,5 @@ export PATH="/home/jasper/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# Enable texlive
+export PATH=$PATH:/opt/texlive/2021/bin/x86_64-linux
