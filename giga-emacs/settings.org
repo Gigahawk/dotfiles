@@ -629,6 +629,14 @@ a unique id will be associated to it."
      "}\n")))
 
 #+END_SRC
+*** Export all drawers and properties
+#+BEGIN_SRC emacs-lisp
+
+(setq org-export-with-drawers t)
+(setq org-export-with-properties t)
+(setq org-export-with-clocks t)
+
+#+END_SRC
 *** 1 inch LaTeX margins
 #+BEGIN_SRC emacs-lisp
 
