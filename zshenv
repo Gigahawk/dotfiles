@@ -3,17 +3,17 @@ typeset -U path
 export BROWSER="firefox"
 
 # Add scripts folder to path
-path=("$HOME/.bin" $path)
+export PATH=$HOME/.bin:$PATH
 
 # Add pebble sdk to path
-path=('~/pebble-dev/pebble-sdk-4.5-linux64/bin' $path)
+export PATH=$HOME/pebble-dev/pebble-sdk-4.5-linux64/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add aws cli to path
-export PATH=~/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Add matlab to path
 export PATH="$HOME/MATLAB/bin:$PATH"
@@ -26,7 +26,7 @@ export PATH=/opt/flutter/bin:$PATH
 
 # Add dart to path
 export PATH=/opt/flutter/bin/cache/dart-sdk/bin:$PATH
-export PATH=~/.pub-cache/bin:$PATH
+export PATH=$HOME/.pub-cache/bin:$PATH
 
 # Add Processing to path
 export PATH=/opt/processing-3.3.6:$PATH
@@ -44,9 +44,8 @@ export PATH="$PATH:$HOME/esp/esp-open-sdk/xtensa-lx106-elf/bin"
 export PATH="$PATH:$HOME/.opam/default/bin/"
 
 # Add miniconda to path
-#export PATH=~/miniconda3/bin:$PATH
 if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-    . ~/miniconda3/etc/profile.d/conda.sh
+    . $HOME/miniconda3/etc/profile.d/conda.sh
 fi
 
 # Add quartus to path
