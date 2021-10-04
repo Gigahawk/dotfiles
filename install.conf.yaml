@@ -106,3 +106,5 @@
       path: x49gp_flash
     ~/.xbps_libselinux: xbps_libselinux
     ~/fomcon-matlab: fomcon-matlab
+    ~/.actrc: actrc
+
