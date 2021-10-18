@@ -685,6 +685,15 @@ a unique id will be associated to it."
 (add-to-list 'org-latex-packages-alist '("" "float"))
 
 #+END_SRC
+** Block settings
+*** Update all dynamic blocks on save
+#+BEGIN_SRC emacs-lisp
+
+(add-hook 'before-save-hook
+          (lambda () (org-update-all-dblocks)))
+
+#+END_SRC
+
 * UI Settings
 ** Disable unnecessary UI elements
 #+BEGIN_SRC emacs-lisp
