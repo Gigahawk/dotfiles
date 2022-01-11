@@ -49,3 +49,15 @@
 [submodule "fomcon-matlab"]
 	path = matlab_plugins/fomcon-matlab
 	url = https://github.com/extall/fomcon-matlab.git
+[submodule "matlab_plugins/petercorke/robotics-toolbox-matlab"]
+	path = matlab_plugins/petercorke/robotics-toolbox-matlab
+	url = https://github.com/petercorke/robotics-toolbox-matlab
+[submodule "matlab_plugins/petercorke/spatial-math"]
+	path = matlab_plugins/petercorke/spatial-math
+	url = https://github.com/petercorke/spatial-math
+[submodule "matlab_plugins/petercorke/toolbox-common-matlab"]
+	path = matlab_plugins/petercorke/toolbox-common-matlab
+	url = https://github.com/petercorke/toolbox-common-matlab
+[submodule "matlab_plugins/petercorke/machinevision-toolbox-matlab"]
+	path = matlab_plugins/petercorke/machinevision-toolbox-matlab
+	url = https://github.com/petercorke/machinevision-toolbox-matlab.git
