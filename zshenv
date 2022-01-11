@@ -18,6 +18,9 @@ export PATH=$HOME/.local/bin:$PATH
 # Add matlab to path
 export PATH="$HOME/MATLAB/bin:$PATH"
 
+# Set matlab config folder
+export MATLABPATH="$HOME/.config/matlab"
+
 # Add Android Studio to path
 #export PATH=/opt/android-studio/bin:$PATH
 

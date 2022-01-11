@@ -47,5 +47,5 @@
 	path = xbps_libselinux
 	url = git@github.com:Gigahawk/xbps_libselinux.git
 [submodule "fomcon-matlab"]
-	path = fomcon-matlab
+	path = matlab_plugins/fomcon-matlab
 	url = https://github.com/extall/fomcon-matlab.git
