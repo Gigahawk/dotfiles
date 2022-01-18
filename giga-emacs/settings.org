@@ -1,13 +1,27 @@
 #+PROPERTY: header-args :results output silent
+* Debug on Error
+#+BEGIN_SRC emacs-lisp
+
+;(setq debug-on-error t)
+
+#+END_SRC
 * Package Settings
 ** Setup extra repos
 #+BEGIN_SRC emacs-lisp
 
 (require 'package)
 (setq package-enable-at-startup nil)
-(setq package-archives '(("org"   . "http://orgmode.org/elpa/")
+(setq package-archives '(
+                         ("nongnu" . "https://elpa.nongnu.org/nongnu/")
                          ("gnu"   . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
+                         ("melpa" . "https://melpa.org/packages/")
+                         ;("org"   . "http://orgmode.org/elpa/")
+                         ))
+(unless package-archive-contents
+  (package-refresh-contents))
+(setq package-load-list '(all))
+(unless (package-installed-p 'org)
+  (package-install 'org))
 (package-initialize)
 
 #+END_SRC
@@ -38,8 +52,8 @@
 **** org
 #+BEGIN_SRC emacs-lisp
 
-(use-package org
-  :ensure org-plus-contrib)
+(use-package org)
+(use-package org-contrib)
 
 #+END_SRC
 **** org-bullets
@@ -150,7 +164,7 @@
         company-dabbprev-ignore-case nil))
 
 #+END_SRC
-*** paradox
+*** COMMENT paradox
 #+BEGIN_SRC emacs-lisp
 
 (use-package paradox
@@ -685,6 +699,14 @@ a unique id will be associated to it."
 (add-to-list 'org-latex-packages-alist '("" "float"))
 
 #+END_SRC
+*** Tangle all files before export
+#+BEGIN_SRC emacs-lisp
+
+(add-hook 'org-export-before-processing-hook
+          (lambda (backend) (org-babel-tangle)))
+
+#+END_SRC
+
 ** Block settings
 *** Update all dynamic blocks on save
 #+BEGIN_SRC emacs-lisp

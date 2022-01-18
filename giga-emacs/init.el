@@ -30,8 +30,7 @@
 \\setlength{\\topmargin}{1.5cm}
 \\addtolength{\\topmargin}{-2.54cm} \\AtBeginDocument{\\color{white}}")
  '(package-selected-packages
-   (quote
-    (org-ref paradox ob-async org org-bullets restart-emacs evil use-package)))
+   '(org-contrib citeproc-org org-ref paradox ob-async org org-bullets restart-emacs evil use-package))
  '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
