@@ -61,3 +61,6 @@
 [submodule "matlab_plugins/petercorke/machinevision-toolbox-matlab"]
 	path = matlab_plugins/petercorke/machinevision-toolbox-matlab
 	url = https://github.com/petercorke/machinevision-toolbox-matlab.git
+[submodule "prusaslicer"]
+	path = prusaslicer
+	url = git@github.com:Gigahawk/prusaslicer-presets.git

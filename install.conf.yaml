@@ -110,4 +110,7 @@
       create: true
       path: matlab
     ~/.actrc: actrc
+    ~/.config/PrusaSlicer:
+      create: true
+      path: prusaslicer
 
