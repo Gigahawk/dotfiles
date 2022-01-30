@@ -128,6 +128,16 @@
   :ensure t)
 
 #+END_SRC
+
+*** undo-tree
+#+BEGIN_SRC emacs-lisp
+
+(use-package undo-tree
+  :ensure t)
+
+#+END_SRC
+
+
 *** evil-mode
 #+BEGIN_SRC emacs-lisp
 
@@ -136,7 +146,8 @@
   :init
     (setq evil-want-C-i-jump nil)
   :config
-  (evil-mode 1))
+  (evil-mode 1)
+  (evil-set-undo-system 'undo-tree))
 
 #+END_SRC
 **** Sane tab behavior

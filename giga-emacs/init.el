@@ -29,8 +29,11 @@
 \\addtolength{\\textheight}{-3cm}
 \\setlength{\\topmargin}{1.5cm}
 \\addtolength{\\topmargin}{-2.54cm} \\AtBeginDocument{\\color{white}}")
+ '(org-format-latex-options
+   '(:foreground default :background default :scale 1.5 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
+                 ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(org-contrib citeproc-org org-ref paradox ob-async org org-bullets restart-emacs evil use-package))
+   '(undo-tree org-contrib citeproc-org org-ref paradox ob-async org org-bullets restart-emacs evil use-package))
  '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
