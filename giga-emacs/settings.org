@@ -372,6 +372,15 @@
 
 #+END_SRC
 * Org Settings
+** LaTeX Format Settings
+*** Increase Preview Size
+#+BEGIN_SRC emacs-lisp
+
+(setq org-format-latex-options
+      (plist-put org-format-latex-options :scale 1.5))
+
+ #+END_SRC
+
 ** Indent subheadlines
 #+BEGIN_SRC emacs-lisp
 
