@@ -60,9 +60,6 @@ export OPENSCADPATH=$HOME/.openscad
 # Source fff config
 source $HOME/.dotfiles/fff_config
 
-# Add poetry to path
-export PATH="$HOME/.poetry/bin:$PATH"
-
 # Add go binaries to path
 export PATH="$HOME/go/bin:$PATH"
 
