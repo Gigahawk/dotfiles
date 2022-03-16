@@ -64,3 +64,6 @@
 [submodule "prusaslicer"]
 	path = prusaslicer
 	url = git@github.com:Gigahawk/prusaslicer-presets.git
+[submodule "giga-emacs/includes/ox-latex-subfig"]
+	path = giga-emacs/includes/ox-latex-subfig
+	url = https://notabug.org/broncodev/ox-latex-subfig.git
