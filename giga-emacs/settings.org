@@ -449,6 +449,7 @@
    (matlab     . t)
    (shell      . t)
    (dot        . t)
+   (asymptote  . t)
    (latex      . t)))
 
 #+END_SRC
